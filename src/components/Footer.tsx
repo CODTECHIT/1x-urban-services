@@ -27,10 +27,9 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-12 mb-20 md:mb-32">
                     <div className="space-y-6 md:space-y-8">
                         <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleLinkClick('home')}>
-                            <div className="relative w-10 h-10 md:w-12 md:h-12 group-hover:rotate-6 transition-transform">
-                                <Image src="/logo.png" alt="1x Logo" fill className="object-contain" />
+                            <div className="relative w-32 h-14 md:w-56 md:h-16 transition-transform hover:scale-105">
+                                <Image src="/logo.png" alt="1x Urban Services" fill className="object-contain" />
                             </div>
-                            <span className="text-xl md:text-2xl font-black tracking-tighter">1x urban services</span>
                         </div>
                         <p className="text-slate-500 leading-relaxed font-bold text-sm md:text-base">Your trusted partner for professional home services. Delivering quality, safety, and customer satisfaction for over a decade.</p>
                     </div>

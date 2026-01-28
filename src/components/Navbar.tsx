@@ -45,11 +45,8 @@ export const Navbar = ({ activePage, onNavigate }: NavbarProps) => {
             <nav className={`fixed top-0 w-full z-[100] transition-all duration-700 ${scrolled || pathname !== '/' ? 'bg-white/80 backdrop-blur-2xl py-5 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]' : 'bg-transparent py-10'}`}>
                 <div className="container mx-auto px-6 flex justify-between items-center">
                     <div className="flex items-center gap-3 md:gap-4 cursor-pointer group" onClick={() => handleLinkClick('home')}>
-                        <div className="relative w-10 h-10 md:w-14 md:h-14 flex items-center justify-center group-hover:rotate-12 group-hover:scale-110 transition-all">
-                            <Image src="/logo.png" alt="1x Logo" fill className="object-contain" />
-                        </div>
-                        <div className="flex flex-col">
-                            <span className={`text-lg md:text-2xl font-black tracking-tighter leading-none ${scrolled || pathname !== '/' ? 'text-slate-800' : 'text-slate-800'}`}>1x urban services</span>
+                        <div className="relative w-32 h-12 md:w-30 md:h-12 flex items-center justify-center transition-transform hover:scale-105">
+                            <Image src="/logo.png" alt="1x Urban Services" fill className="object-contain" priority />
                         </div>
                     </div>
 
@@ -78,10 +75,9 @@ export const Navbar = ({ activePage, onNavigate }: NavbarProps) => {
                 {/* Mobile Menu Header */}
                 <div className="flex justify-between items-center p-6 border-b border-white/10">
                     <div className="flex items-center gap-3">
-                        <div className="relative w-10 h-10 flex items-center justify-center">
-                            <Image src="/logo.png" alt="1x Logo" fill className="object-contain" />
+                        <div className="relative w-32 h-12 flex items-center justify-center">
+                            <Image src="/logo.png" alt="1x Urban Services" fill className="object-contain" />
                         </div>
-                        <span className="text-xl font-black tracking-tighter text-white">1x urban services</span>
                     </div>
                     <button
                         className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors active:scale-95"
