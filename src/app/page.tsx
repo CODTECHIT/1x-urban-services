@@ -64,7 +64,7 @@ const Hero = () => (
 
           <Reveal direction="up" delay={0.6} width="100%">
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 lg:gap-4 pt-2 lg:pt-3">
-              <WhatsAppBtn text="Get a Free Quote" className="!w-full sm:!w-auto !bg-[#fbbf24] !text-slate-900 border-b-4 border-[#d97706] hover:!bg-[#f59e0b] !shadow-xl active:border-b-0 active:translate-y-1" />
+              <WhatsAppBtn text="Get a Free Quote" className="!w-full sm:!w-auto !bg-[#fbbf24] !text-slate-900 border-b-4 border-[#d97706] hover:!bg-[#f59e0b] !shadow-xl !shadow-amber-900/20 active:border-b-0 active:translate-y-1" />
               <CallBtn className="!w-full sm:!w-auto" />
             </div>
           </Reveal>
