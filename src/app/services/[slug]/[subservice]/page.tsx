@@ -150,7 +150,7 @@ export default async function SubServiceDetailPage({ params }: Props) {
 
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         {/* Benefits */}
-                        <Reveal direction="left" delay={0.2}>
+                        <Reveal direction="up" delay={0.2} width="100%">
                             <div>
                                 <div className="flex items-center gap-4 mb-8">
                                     <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
@@ -172,7 +172,7 @@ export default async function SubServiceDetailPage({ params }: Props) {
                         </Reveal>
 
                         {/* Process */}
-                        <Reveal direction="right" delay={0.2}>
+                        <Reveal direction="up" delay={0.2} width="100%">
                             <div>
                                 <div className="flex items-center gap-4 mb-8">
                                     <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
@@ -199,7 +199,7 @@ export default async function SubServiceDetailPage({ params }: Props) {
             {/* Why Choose Us */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <Reveal direction="up" delay={0.1}>
+                    <Reveal direction="up" delay={0.1} width="100%">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl md:text-5xl font-black mb-4">Why Choose 1X Urban Services?</h2>
                             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -223,7 +223,7 @@ export default async function SubServiceDetailPage({ params }: Props) {
                                 desc: "No hidden charges. What you see is what you pay."
                             }
                         ].map((item, i) => (
-                            <Reveal key={i} direction="up" delay={i * 0.1}>
+                            <Reveal key={i} direction="up" delay={i * 0.1} width="100%" className="h-full" overflow="visible">
                                 <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:border-emerald-200 transition-all h-full">
                                     <h3 className="text-xl font-black mb-3">{item.title}</h3>
                                     <p className="text-slate-600 font-bold leading-relaxed">{item.desc}</p>
@@ -239,7 +239,7 @@ export default async function SubServiceDetailPage({ params }: Props) {
             {/* Related Services */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <Reveal direction="up" delay={0.1}>
+                    <Reveal direction="up" delay={0.1} width="100%">
                         <h2 className="text-3xl md:text-4xl font-black mb-10 text-center">Other {service.name}</h2>
                     </Reveal>
                     <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -247,10 +247,10 @@ export default async function SubServiceDetailPage({ params }: Props) {
                             .filter(s => s.id !== subServiceId)
                             .slice(0, 4)
                             .map((relatedService, i) => (
-                                <Reveal key={relatedService.id} direction="up" delay={i * 0.1}>
+                                <Reveal key={relatedService.id} direction="up" delay={i * 0.1} width="100%" className="h-full" overflow="visible">
                                     <Link
                                         href={`/services/${serviceSlug}/${relatedService.id}`}
-                                        className="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-emerald-200 transition-all hover:shadow-lg h-full"
+                                        className="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-emerald-200 transition-all hover:shadow-lg h-full block"
                                     >
                                         <h3 className="font-black mb-2 group-hover:text-emerald-600 transition-colors text-sm lg:text-base">
                                             {relatedService.name}
