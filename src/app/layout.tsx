@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { FloatingContact } from "@/components/FloatingContact";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className={outfit.variable}>
       <body className="antialiased" suppressHydrationWarning>
         {children}
+        <FloatingContact />
         <script
           dangerouslySetInnerHTML={{
             __html: `
