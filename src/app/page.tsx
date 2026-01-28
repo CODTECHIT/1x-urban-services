@@ -24,6 +24,7 @@ import {
 import { WhatsAppBtn, CallBtn, WHATSAPP_NUMBER, PHONE_DISPLAY } from '@/components/Shared';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { AnimatedCounter } from '@/components/AnimatedCounter';
 
 const Hero = () => (
   <section className="relative min-h-[85vh] flex flex-col pt-24 lg:pt-32 pb-8 lg:pb-16 overflow-hidden bg-white">
@@ -144,7 +145,7 @@ const Hero = () => (
         <div className="mt-6 lg:mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs lg:text-sm text-slate-500 font-medium gap-2 lg:gap-3">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="text-emerald-500" size={16} />
-            5,000+ Satisfied Customers
+            <AnimatedCounter value="5000" />+ Satisfied Customers
           </div>
 
         </div>
@@ -165,7 +166,9 @@ const ExperienceStats = () => (
           { label: "Expert Technicians", value: "50+", sub: "Trained Professionals" },
         ].map((stat, idx) => (
           <div key={idx} className="group cursor-default text-center lg:text-left">
-            <div className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-black text-white group-hover:text-emerald-400 transition-all duration-700 tracking-tighter">{stat.value}</div>
+            <div className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-black text-white group-hover:text-emerald-400 transition-all duration-700 tracking-tighter">
+              <AnimatedCounter value={stat.value} />
+            </div>
             <div className="h-1 w-12 bg-emerald-500 mb-4 group-hover:w-full transition-all duration-700 rounded-full mx-auto lg:mx-0"></div>
             <p className="text-emerald-500 font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs mb-1">{stat.label}</p>
             <p className="text-slate-500 text-xs sm:text-sm font-bold">{stat.sub}</p>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { MessageCircle, Phone, Plus, X } from 'lucide-react';
+import { MessageCircle, Phone, Headset, X } from 'lucide-react';
 import { WHATSAPP_NUMBER } from './Shared';
 
 export const FloatingContact = () => {
@@ -45,7 +45,7 @@ export const FloatingContact = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className={`w-16 h-16 flex items-center justify-center rounded-full shadow-2xl transition-all duration-300 transform active:scale-90 ${isOpen ? 'bg-rose-500 text-white rotate-0' : 'bg-emerald-600 text-white'}`}
             >
-                {isOpen ? <X size={32} /> : <Plus size={32} className="animate-pulse" />}
+                {isOpen ? <X size={32} /> : <Headset size={32} className="animate-pulse" />}
             </button>
         </div>
     );
