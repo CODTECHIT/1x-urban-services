@@ -58,15 +58,15 @@ const Hero = () => (
           </Reveal>
 
           <Reveal direction="up" delay={0.4}>
-            <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0 px-4 sm:px-0">
+            <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
               Professional and affordable home services with <span className="font-bold text-slate-700">10+ years of experience</span> in deep cleaning, pest control, painting, and more.
             </p>
           </Reveal>
 
           <Reveal direction="up" delay={0.6}>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2 lg:pt-3">
-              <WhatsAppBtn text="Get a Free Quote" className="!bg-amber-500 !text-slate-800 hover:!bg-amber-600 !shadow-amber-200/50" />
-              <CallBtn />
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 lg:gap-4 pt-2 lg:pt-3">
+              <WhatsAppBtn text="Get a Free Quote" className="!w-full sm:!w-auto !bg-amber-500 !text-slate-800 hover:!bg-amber-600 !shadow-amber-200/50" />
+              <CallBtn className="!w-full sm:!w-auto" />
             </div>
           </Reveal>
         </div>
@@ -80,13 +80,12 @@ const Hero = () => (
               <div className="relative w-[260px] h-[300px] lg:w-[400px] lg:h-[440px] z-10 lg:mr-12">
                 <div
                   className="absolute inset-0 rounded-[2.5rem] overflow-hidden"
-                  style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
                 >
                   <Image
                     src="/hero-image.jpg"
                     alt="Service Professional"
                     fill
-                    className="object-cover"
+                    className="object-cover lg:object-top"
                     priority
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
