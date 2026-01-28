@@ -49,30 +49,29 @@ const Hero = () => (
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
         <div className="space-y-6 lg:space-y-7 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-          <Reveal direction="up" delay={0.2}>
+          <Reveal direction="up" delay={0.2} width="100%">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight text-slate-800">
-              Your <span className="text-emerald-600">one-stop</span> <br className="hidden sm:block" />
-              <span className="text-emerald-600">solution</span> for all <br className="hidden sm:block" />
-              <span className="text-slate-800">home</span> <span className="text-emerald-600">needs</span>
+              Your <span className="text-emerald-700">one-stop solution</span> <br className="hidden sm:block" />
+              for all home <span className="text-emerald-700">needs</span>
             </h1>
           </Reveal>
 
-          <Reveal direction="up" delay={0.4}>
+          <Reveal direction="up" delay={0.4} width="100%">
             <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
               Professional and affordable home services with <span className="font-bold text-slate-700">10+ years of experience</span> in deep cleaning, pest control, painting, and more.
             </p>
           </Reveal>
 
-          <Reveal direction="up" delay={0.6}>
+          <Reveal direction="up" delay={0.6} width="100%">
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 lg:gap-4 pt-2 lg:pt-3">
-              <WhatsAppBtn text="Get a Free Quote" className="!w-full sm:!w-auto !bg-amber-500 !text-slate-800 hover:!bg-amber-600 !shadow-amber-200/50" />
+              <WhatsAppBtn text="Get a Free Quote" className="!w-full sm:!w-auto !bg-[#fbbf24] !text-slate-900 border-b-4 border-[#d97706] hover:!bg-[#f59e0b] !shadow-xl active:border-b-0 active:translate-y-1" />
               <CallBtn className="!w-full sm:!w-auto" />
             </div>
           </Reveal>
         </div>
 
         {/* Right Content - Composition with Man and Floating Cards */}
-        <Reveal direction="up" delay={0.4} overflow="visible">
+        <Reveal direction="up" delay={0.4} width="100%" overflow="visible">
           <div className="relative h-[350px] lg:h-[550px] flex items-center justify-center lg:justify-end mt-6 lg:mt-0">
             {/* Composition Wrapper */}
             <div className="relative group">
