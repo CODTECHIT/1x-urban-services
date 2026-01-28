@@ -29,7 +29,7 @@ import { AnimatedCounter } from '@/components/AnimatedCounter';
 import { Reveal } from '@/components/Reveal';
 
 const Hero = () => (
-  <section className="relative min-h-[85vh] flex flex-col pt-24 lg:pt-32 pb-8 lg:pb-16 overflow-hidden bg-white">
+  <section className="relative min-h-[85vh] flex flex-col pt-28 lg:pt-32 pb-8 lg:pb-16 overflow-hidden bg-white">
     {/* Background Image with Overlay */}
     <div className="absolute inset-0 z-0">
       <Image
@@ -50,7 +50,7 @@ const Hero = () => (
         {/* Left Content */}
         <div className="space-y-6 lg:space-y-7 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
           <Reveal direction="up" delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight text-slate-800">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight text-slate-800">
               Your <span className="text-emerald-600">one-stop</span> <br className="hidden sm:block" />
               <span className="text-emerald-600">solution</span> for all <br className="hidden sm:block" />
               <span className="text-slate-800">home</span> <span className="text-emerald-600">needs</span>
@@ -78,7 +78,10 @@ const Hero = () => (
             <div className="relative group">
               {/* Main Character Image */}
               <div className="relative w-[260px] h-[300px] lg:w-[400px] lg:h-[440px] z-10 lg:mr-12">
-                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                <div
+                  className="absolute inset-0 rounded-[2.5rem] overflow-hidden"
+                  style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
+                >
                   <Image
                     src="/hero-image.jpg"
                     alt="Service Professional"
@@ -312,7 +315,7 @@ const ContactUs = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-8 py-5 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all font-bold placeholder:text-slate-300"
+                      className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-8 py-5 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all font-bold placeholder:text-slate-300 text-base"
                       placeholder="Johnathan Doe"
                     />
                   </div>
@@ -323,7 +326,7 @@ const ContactUs = () => {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.25rem] px-6 py-4 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all font-bold placeholder:text-slate-300 resize-none"
+                      className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.25rem] px-6 py-4 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all font-bold placeholder:text-slate-300 resize-none text-base"
                       placeholder="How can we help you today?"
                     ></textarea>
                   </div>

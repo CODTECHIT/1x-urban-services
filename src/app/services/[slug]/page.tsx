@@ -80,7 +80,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                         </Link>
                     </Reveal>
                     <Reveal direction="up" delay={0.2}>
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
+                        <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
                             {service.name}
                         </h1>
                     </Reveal>
