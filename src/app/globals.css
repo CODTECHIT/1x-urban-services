@@ -1,42 +1,216 @@
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: var(--font-outfit);
+
+  /* Override emerald colors with Deep Forest Green palette */
+  --color-emerald-50: #e6f4ed;
+  --color-emerald-100: #ccead9;
+  --color-emerald-200: #99d5b3;
+  --color-emerald-300: #66c08d;
+  --color-emerald-400: #33ab67;
+  --color-emerald-500: #006838;
+  /* Primary Green - Deep Forest Green */
+  --color-emerald-600: #006838;
+  /* Primary Green - Deep Forest Green */
+  --color-emerald-700: #005530;
+  --color-emerald-800: #004228;
+  --color-emerald-900: #002f20;
+  --color-emerald-950: #001c14;
+
+  /* Action Gold for CTAs */
+  --color-amber-200: #FFE082;
+  /* Light gold for shadows */
+  --color-amber-400: #FFC107;
+  /* Action Gold */
+  --color-amber-500: #FFC107;
+  /* Action Gold */
+  --color-amber-600: #FFB300;
+  /* Slightly darker gold */
+
+  /* Surface colors */
+  --color-slate-50: #F4F7F6;
+  /* Surface Gray - Cool Off-White */
+
+  /* Text colors - using Text Charcoal */
+  --color-slate-600: #5a6268;
+  --color-slate-700: #2D3436;
+  /* Text Charcoal */
+  --color-slate-800: #2D3436;
+  /* Text Charcoal */
+  --color-slate-900: #1a1d1f;
+
+  /* Teal colors for gradients */
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2D3436;
+  /* Text Charcoal - softer than pure black */
+  --primary: #006838;
+  /* Primary Green - Deep Forest Green */
+  --primary-dark: #004d28;
+  /* Darker shade of Primary Green */
+  --primary-light: #e6f4ed;
+  /* Lighter tint of Primary Green */
+  --accent: #FFC107;
+  /* Action Gold - for CTAs and highlights */
+  --surface: #F4F7F6;
+  /* Surface Gray - Cool Off-White for backgrounds */
+  --secondary: #64748b;
+  --black: #000000;
+  --white: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 1400px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
   }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes drift {
+
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) rotate(5deg) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) rotate(-5deg) scale(0.9);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes bounce-subtle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 15s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 3s ease-in-out infinite;
+}
+
+.stagger-1 {
+  animation-delay: 100ms;
+}
+
+.stagger-2 {
+  animation-delay: 200ms;
+}
+
+.stagger-3 {
+  animation-delay: 300ms;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
 }
