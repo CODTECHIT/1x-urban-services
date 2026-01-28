@@ -150,7 +150,7 @@ const ExperienceStats = () => (
   <section className="py-16 bg-slate-950 relative overflow-hidden">
     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent"></div>
     <div className="container mx-auto px-6 relative z-10">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 lg:gap-16">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
         {[
           { label: "Years Experience", value: "10+", sub: "Trusted Service" },
           { label: "Happy Customers", value: "5000+", sub: "Homes Served" },
@@ -160,8 +160,8 @@ const ExperienceStats = () => (
           <div key={idx} className="group cursor-default text-center lg:text-left">
             <div className="mb-2 text-3xl sm:text-4xl lg:text-6xl font-black text-white group-hover:text-emerald-400 transition-all duration-700 tracking-tighter">{stat.value}</div>
             <div className="h-1 w-12 bg-emerald-500 mb-4 group-hover:w-full transition-all duration-700 rounded-full mx-auto lg:mx-0"></div>
-            <p className="text-emerald-500 font-black uppercase tracking-[0.2em] text-[8px] sm:text-[10px] mb-1">{stat.label}</p>
-            <p className="text-slate-500 text-[10px] sm:text-xs font-bold">{stat.sub}</p>
+            <p className="text-emerald-500 font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs mb-1">{stat.label}</p>
+            <p className="text-slate-500 text-xs sm:text-sm font-bold">{stat.sub}</p>
           </div>
         ))}
       </div>
@@ -379,7 +379,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {services.map((s, i) => {
             const slugMap: { [key: string]: string } = {
               "Home Cleaning Services": "home-cleaning",
