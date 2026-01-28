@@ -72,48 +72,52 @@ const Hero = () => (
         </div>
 
         {/* Right Content - Composition with Man and Floating Cards */}
-        <Reveal direction="left" delay={0.4}>
-          <div className="relative h-[300px] lg:h-[500px] flex items-center justify-center mt-6 lg:mt-0">
-            {/* Main Character Image with Diffused Borders */}
-            <div className="relative w-[240px] h-[280px] lg:w-[380px] lg:h-[420px] z-10">
-              <div className="absolute inset-0 rounded-[2rem] overflow-hidden">
-                <Image
-                  src="/hero-image.jpg"
-                  alt="Service Professional"
-                  fill
-                  className="object-cover scale-105"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+        <Reveal direction="up" delay={0.4} overflow="visible">
+          <div className="relative h-[350px] lg:h-[550px] flex items-center justify-center lg:justify-end mt-6 lg:mt-0">
+            {/* Composition Wrapper */}
+            <div className="relative group">
+              {/* Main Character Image */}
+              <div className="relative w-[260px] h-[300px] lg:w-[400px] lg:h-[440px] z-10 lg:mr-12">
+                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                  <Image
+                    src="/hero-image.jpg"
+                    alt="Service Professional"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               </div>
-              {/* Diffusion Layer */}
-              <div className="absolute inset-0 rounded-[2rem] shadow-[inset_0_0_30px_15px_white] lg:shadow-[inset_0_0_60px_30px_white] ring-1 ring-white/50 pointer-events-none"></div>
-            </div>
 
-            {/* Floating Feature Cards - Hidden on small mobile, visible on tablet/desktop */}
-            <div className="absolute top-6 right-0 lg:top-10 lg:right-6 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex items-center gap-2.5 animate-float z-20 max-w-[140px] lg:max-w-[180px] hidden sm:flex">
-              <div className="w-7 h-7 lg:w-9 lg:h-9 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
-                <ShieldCheck size={14} className="lg:w-4 lg:h-4" />
+              {/* 100% Secure - Top Right */}
+              <div className="absolute -top-4 -right-6 lg:top-0 lg:-right-4 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex items-center gap-2.5 animate-float z-20 max-w-[140px] lg:max-w-[180px] hidden sm:flex">
+                <div className="w-7 h-7 lg:w-9 lg:h-9 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">
+                  <ShieldCheck size={14} className="lg:w-4 lg:h-4" />
+                </div>
+                <div>
+                  <p className="text-[7px] lg:text-[9px] uppercase font-bold text-slate-400">100% Secure</p>
+                  <p className="text-[11px] lg:text-xs font-bold text-slate-700">Verified Experts</p>
+                </div>
               </div>
-              <div>
-                <p className="text-[7px] lg:text-[9px] uppercase font-bold text-slate-400">100% Secure</p>
-                <p className="text-[11px] lg:text-xs font-bold text-slate-700">Verified Experts</p>
+
+              {/* Global Scale - Middle Left */}
+              <div className="absolute top-20 -left-8 lg:top-24 lg:-left-12 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex flex-col items-center gap-1 animate-float stagger-2 z-20 text-center w-20 lg:w-28 hidden sm:flex">
+                <Globe className="text-emerald-500 w-5 h-5 lg:w-7 lg:h-7" />
+                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Global Scale</p>
               </div>
-            </div>
 
-            <div className="absolute top-16 lg:top-24 -left-3 lg:left-0 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex flex-col items-center gap-1 animate-float stagger-2 z-20 text-center w-20 lg:w-28 hidden sm:flex">
-              <Globe className="text-emerald-500 w-5 h-5 lg:w-7 lg:h-7" />
-              <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Global Scale</p>
-            </div>
+              {/* Top Rated - Middle Right */}
+              <div className="absolute bottom-24 -right-10 lg:bottom-32 lg:-right-8 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex flex-col items-center gap-1 animate-float stagger-1 z-20 text-center w-20 lg:w-28 hidden sm:flex">
+                <Award className="text-emerald-500 w-5 h-5 lg:w-7 lg:h-7" />
+                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Top Rated</p>
+              </div>
 
-            <div className="absolute bottom-20 lg:bottom-28 -right-1 lg:-right-3 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex flex-col items-center gap-1 animate-float stagger-1 z-20 text-center w-20 lg:w-28 hidden sm:flex">
-              <Award className="text-emerald-500 w-5 h-5 lg:w-7 lg:h-7" />
-              <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Top Rated</p>
-            </div>
-
-            <div className="absolute bottom-8 lg:bottom-16 left-0 lg:left-8 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex items-center gap-2 animate-float stagger-3 z-20 max-w-[160px] lg:max-w-[200px] hidden sm:flex">
-              <div className="bg-emerald-600 text-white text-[9px] lg:text-[11px] font-black px-1.5 py-0.5 rounded">1x</div>
-              <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Quality Service</p>
+              {/* Quality Service - Bottom Left */}
+              <div className="absolute bottom-6 -left-4 lg:bottom-10 lg:left-0 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex items-center gap-2 animate-float stagger-3 z-20 max-w-[160px] lg:max-w-[200px] hidden sm:flex">
+                <div className="bg-emerald-600 text-white text-[9px] lg:text-[11px] font-black px-1.5 py-0.5 rounded">1x</div>
+                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Quality Service</p>
+              </div>
             </div>
           </div>
         </Reveal>

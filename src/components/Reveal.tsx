@@ -8,9 +8,10 @@ interface Props {
     width?: "fit-content" | "100%";
     direction?: "up" | "down" | "left" | "right";
     delay?: number;
+    overflow?: "hidden" | "visible";
 }
 
-export const Reveal = ({ children, width = "fit-content", direction = "up", delay = 0.25 }: Props) => {
+export const Reveal = ({ children, width = "fit-content", direction = "up", delay = 0.25, overflow = "hidden" }: Props) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -36,7 +37,7 @@ export const Reveal = ({ children, width = "fit-content", direction = "up", dela
     };
 
     return (
-        <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+        <div ref={ref} style={{ position: "relative", width, overflow }}>
             <motion.div
                 variants={variants}
                 initial="hidden"

@@ -6,6 +6,7 @@ import { ArrowLeft, CheckCircle2, Target, Zap } from 'lucide-react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Metadata } from 'next';
+import { Reveal } from '@/components/Reveal';
 
 type Props = {
     params: Promise<{ slug: string; subservice: string }>;
@@ -77,23 +78,31 @@ export default async function SubServiceDetailPage({ params }: Props) {
             <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.2),transparent)]"></div>
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
-                    <Link
-                        href={`/services/${serviceSlug}`}
-                        className="inline-flex items-center gap-2 text-emerald-400 font-bold mb-8 hover:gap-3 transition-all mx-auto md:mx-0"
-                    >
-                        <ArrowLeft size={20} /> Back to {service.name}
-                    </Link>
+                    <Reveal direction="down" delay={0.1}>
+                        <Link
+                            href={`/services/${serviceSlug}`}
+                            className="inline-flex items-center gap-2 text-emerald-400 font-bold mb-8 hover:gap-3 transition-all mx-auto md:mx-0"
+                        >
+                            <ArrowLeft size={20} /> Back to {service.name}
+                        </Link>
+                    </Reveal>
 
                     <div className="max-w-4xl mx-auto md:mx-0">
-                        <div className="inline-block px-5 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-6">
-                            {service.name}
-                        </div>
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
-                            {subService.name}
-                        </h1>
-                        <p className="text-xl sm:text-2xl text-emerald-100/70 leading-relaxed mb-8">
-                            {subService.fullDescription}
-                        </p>
+                        <Reveal direction="up" delay={0.2}>
+                            <div className="inline-block px-5 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-6">
+                                {service.name}
+                            </div>
+                        </Reveal>
+                        <Reveal direction="up" delay={0.3}>
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
+                                {subService.name}
+                            </h1>
+                        </Reveal>
+                        <Reveal direction="up" delay={0.4}>
+                            <p className="text-xl sm:text-2xl text-emerald-100/70 leading-relaxed mb-8">
+                                {subService.fullDescription}
+                            </p>
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -141,44 +150,48 @@ export default async function SubServiceDetailPage({ params }: Props) {
 
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         {/* Benefits */}
-                        <div>
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                                    <Target className="text-emerald-600" size={24} />
-                                </div>
-                                <h2 className="text-3xl md:text-4xl font-black text-slate-700">Key Benefits</h2>
-                            </div>
-                            <div className="space-y-4">
-                                {subService.benefits.map((benefit, index) => (
-                                    <div key={index} className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-100">
-                                        <div className="mt-1">
-                                            <CheckCircle2 className="text-emerald-500" size={20} />
-                                        </div>
-                                        <p className="text-slate-700 font-bold leading-relaxed">{benefit}</p>
+                        <Reveal direction="left" delay={0.2}>
+                            <div>
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                        <Target className="text-emerald-600" size={24} />
                                     </div>
-                                ))}
+                                    <h2 className="text-3xl md:text-4xl font-black text-slate-700">Key Benefits</h2>
+                                </div>
+                                <div className="space-y-4">
+                                    {subService.benefits.map((benefit, index) => (
+                                        <div key={index} className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-100">
+                                            <div className="mt-1">
+                                                <CheckCircle2 className="text-emerald-500" size={20} />
+                                            </div>
+                                            <p className="text-slate-700 font-bold leading-relaxed">{benefit}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        </Reveal>
 
                         {/* Process */}
-                        <div>
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                                    <Zap className="text-emerald-600" size={24} />
-                                </div>
-                                <h2 className="text-3xl md:text-4xl font-black text-slate-700">Our Process</h2>
-                            </div>
-                            <div className="space-y-4">
-                                {subService.process.map((step, index) => (
-                                    <div key={index} className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-100">
-                                        <div className="flex-shrink-0 w-8 h-8 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-black text-sm">
-                                            {index + 1}
-                                        </div>
-                                        <p className="text-slate-700 font-bold leading-relaxed">{step}</p>
+                        <Reveal direction="right" delay={0.2}>
+                            <div>
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                        <Zap className="text-emerald-600" size={24} />
                                     </div>
-                                ))}
+                                    <h2 className="text-3xl md:text-4xl font-black text-slate-700">Our Process</h2>
+                                </div>
+                                <div className="space-y-4">
+                                    {subService.process.map((step, index) => (
+                                        <div key={index} className="flex items-start gap-4 bg-white p-6 rounded-2xl border border-slate-100">
+                                            <div className="flex-shrink-0 w-8 h-8 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-black text-sm">
+                                                {index + 1}
+                                            </div>
+                                            <p className="text-slate-700 font-bold leading-relaxed">{step}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -186,12 +199,14 @@ export default async function SubServiceDetailPage({ params }: Props) {
             {/* Why Choose Us */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-black mb-4">Why Choose 1X Urban Services?</h2>
-                        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            We are committed to delivering the highest quality service with professionalism and care.
-                        </p>
-                    </div>
+                    <Reveal direction="up" delay={0.1}>
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl font-black mb-4">Why Choose 1X Urban Services?</h2>
+                            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                                We are committed to delivering the highest quality service with professionalism and care.
+                            </p>
+                        </div>
+                    </Reveal>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -208,10 +223,12 @@ export default async function SubServiceDetailPage({ params }: Props) {
                                 desc: "No hidden charges. What you see is what you pay."
                             }
                         ].map((item, i) => (
-                            <div key={i} className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:border-emerald-200 transition-all">
-                                <h3 className="text-xl font-black mb-3">{item.title}</h3>
-                                <p className="text-slate-600 font-bold leading-relaxed">{item.desc}</p>
-                            </div>
+                            <Reveal key={i} direction="up" delay={i * 0.1}>
+                                <div className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:border-emerald-200 transition-all h-full">
+                                    <h3 className="text-xl font-black mb-3">{item.title}</h3>
+                                    <p className="text-slate-600 font-bold leading-relaxed">{item.desc}</p>
+                                </div>
+                            </Reveal>
                         ))}
                     </div>
                 </div>
@@ -222,22 +239,25 @@ export default async function SubServiceDetailPage({ params }: Props) {
             {/* Related Services */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-black mb-10 text-center">Other {service.name}</h2>
+                    <Reveal direction="up" delay={0.1}>
+                        <h2 className="text-3xl md:text-4xl font-black mb-10 text-center">Other {service.name}</h2>
+                    </Reveal>
                     <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {service.subServices
                             .filter(s => s.id !== subServiceId)
                             .slice(0, 4)
-                            .map((relatedService) => (
-                                <Link
-                                    key={relatedService.id}
-                                    href={`/services/${serviceSlug}/${relatedService.id}`}
-                                    className="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-emerald-200 transition-all hover:shadow-lg"
-                                >
-                                    <h3 className="font-black mb-2 group-hover:text-emerald-600 transition-colors">
-                                        {relatedService.name}
-                                    </h3>
-                                    <p className="text-sm text-slate-500 font-bold mb-3">{relatedService.shortDesc}</p>
-                                </Link>
+                            .map((relatedService, i) => (
+                                <Reveal key={relatedService.id} direction="up" delay={i * 0.1}>
+                                    <Link
+                                        href={`/services/${serviceSlug}/${relatedService.id}`}
+                                        className="group bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-emerald-200 transition-all hover:shadow-lg h-full"
+                                    >
+                                        <h3 className="font-black mb-2 group-hover:text-emerald-600 transition-colors text-sm lg:text-base">
+                                            {relatedService.name}
+                                        </h3>
+                                        <p className="text-xs text-slate-500 font-bold mb-3 line-clamp-2">{relatedService.shortDesc}</p>
+                                    </Link>
+                                </Reveal>
                             ))}
                     </div>
                 </div>

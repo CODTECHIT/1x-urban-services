@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Metadata } from 'next';
+import { Reveal } from '@/components/Reveal';
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -70,18 +71,24 @@ export default async function ServiceDetailPage({ params }: Props) {
             <section className="relative bg-emerald-950 text-white py-20 overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.2),transparent)]"></div>
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
-                    <Link
-                        href="/services"
-                        className="inline-flex items-center gap-2 text-emerald-400 font-bold mb-8 hover:gap-3 transition-all mx-auto md:mx-0"
-                    >
-                        <ArrowLeft size={20} /> Back to All Services
-                    </Link>
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
-                        {service.name}
-                    </h1>
-                    <p className="text-lg sm:text-xl text-emerald-100/70 leading-relaxed max-w-3xl mx-auto md:mx-0">
-                        {service.fullDescription}
-                    </p>
+                    <Reveal direction="down" delay={0.1}>
+                        <Link
+                            href="/services"
+                            className="inline-flex items-center gap-2 text-emerald-400 font-bold mb-8 hover:gap-3 transition-all mx-auto md:mx-0"
+                        >
+                            <ArrowLeft size={20} /> Back to All Services
+                        </Link>
+                    </Reveal>
+                    <Reveal direction="up" delay={0.2}>
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
+                            {service.name}
+                        </h1>
+                    </Reveal>
+                    <Reveal direction="up" delay={0.3}>
+                        <p className="text-lg sm:text-xl text-emerald-100/70 leading-relaxed max-w-3xl mx-auto md:mx-0">
+                            {service.fullDescription}
+                        </p>
+                    </Reveal>
                 </div>
             </section>
 
@@ -96,7 +103,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {service.subServices.map((subService) => {
+                        {service.subServices.map((subService, i) => {
                             // Check if this sub-service has a specific image (we have generated a few key ones)
                             const specificImageIds = [
                                 'bathroom-cleaning', 'kitchen-cleaning', 'sofa-cleaning',
@@ -114,43 +121,44 @@ export default async function ServiceDetailPage({ params }: Props) {
                                 : `/images/services/${service.slug}.png`;
 
                             return (
-                                <Link
-                                    key={subService.id}
-                                    href={`/services/${service.slug}/${subService.id}`}
-                                    className="group block cursor-pointer"
-                                >
-                                    {/* Sub-Service Image */}
-                                    <div className="relative overflow-hidden rounded-[2.5rem] mb-6 aspect-[4/3] bg-slate-100">
-                                        <Image
-                                            src={imagePath}
-                                            alt={subService.name}
-                                            fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        {/* Overlay Gradient */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+                                <Reveal key={subService.id} direction="up" delay={i * 0.1}>
+                                    <Link
+                                        href={`/services/${service.slug}/${subService.id}`}
+                                        className="group block cursor-pointer"
+                                    >
+                                        {/* Sub-Service Image */}
+                                        <div className="relative overflow-hidden rounded-[2.5rem] mb-6 aspect-[4/3] bg-slate-100">
+                                            <Image
+                                                src={imagePath}
+                                                alt={subService.name}
+                                                fill
+                                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            {/* Overlay Gradient */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
 
-                                        {/* Dynamic Icon Overlay */}
-                                        <div className="absolute bottom-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
-                                            <CheckCircle2 className="text-emerald-400" size={20} />
+                                            {/* Dynamic Icon Overlay */}
+                                            <div className="absolute bottom-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+                                                <CheckCircle2 className="text-emerald-400" size={20} />
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    {/* Sub-service Name */}
-                                    <h3 className="text-xl font-black mb-3 group-hover:text-emerald-600 transition-colors">
-                                        {subService.name}
-                                    </h3>
+                                        {/* Sub-service Name */}
+                                        <h3 className="text-xl font-black mb-3 group-hover:text-emerald-600 transition-colors">
+                                            {subService.name}
+                                        </h3>
 
-                                    {/* Description */}
-                                    <p className="text-slate-600 font-bold text-sm mb-4 leading-relaxed">
-                                        {subService.shortDesc}
-                                    </p>
+                                        {/* Description */}
+                                        <p className="text-slate-600 font-bold text-sm mb-4 leading-relaxed">
+                                            {subService.shortDesc}
+                                        </p>
 
-                                    {/* View Details Link */}
-                                    <div className="flex items-center gap-2 text-emerald-600 font-black text-xs mt-2 group-hover:gap-4 transition-all uppercase tracking-widest">
-                                        View Details <ArrowRight size={14} />
-                                    </div>
-                                </Link>
+                                        {/* View Details Link */}
+                                        <div className="flex items-center gap-2 text-emerald-600 font-black text-xs mt-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                                            View Details <ArrowRight size={14} />
+                                        </div>
+                                    </Link>
+                                </Reveal>
                             );
                         })}
                     </div>

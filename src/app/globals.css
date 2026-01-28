@@ -119,7 +119,7 @@ body {
   }
 
   50% {
-    transform: translateY(-20px) rotate(2deg);
+    transform: translateY(-10px) rotate(1deg);
   }
 }
 
