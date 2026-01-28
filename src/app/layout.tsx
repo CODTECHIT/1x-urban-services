@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     title: "1x | Premium Home Services",
     description: "Your trusted partner for home hygiene and maintenance.",
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

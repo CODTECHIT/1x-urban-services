@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { WhatsAppBtn } from './Shared';
 import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 interface FooterProps {
     onNavigate?: (page: string) => void;
@@ -26,7 +27,9 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 lg:gap-12 mb-20 md:mb-32">
                     <div className="space-y-6 md:space-y-8">
                         <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleLinkClick('home')}>
-                            <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-600 text-white rounded-[0.75rem] md:rounded-[1rem] flex items-center justify-center font-black text-lg md:text-xl shadow-lg shadow-emerald-100 group-hover:rotate-6 transition-transform">1x</div>
+                            <div className="relative w-10 h-10 md:w-12 md:h-12 group-hover:rotate-6 transition-transform">
+                                <Image src="/logo.png" alt="1x Logo" fill className="object-contain" />
+                            </div>
                             <span className="text-xl md:text-2xl font-black tracking-tighter">1x urban services</span>
                         </div>
                         <p className="text-slate-500 leading-relaxed font-bold text-sm md:text-base">Your trusted partner for professional home services. Delivering quality, safety, and customer satisfaction for over a decade.</p>
