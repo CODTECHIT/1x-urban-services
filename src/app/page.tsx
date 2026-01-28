@@ -112,21 +112,28 @@ const Hero = () => (
       <div className="mt-8 lg:mt-16 bg-white rounded-3xl shadow-xl border border-slate-100 p-6 lg:p-8">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 lg:items-center lg:justify-between">
 
-          {/* Mobile Scroll / Desktop Grid of Services */}
-          <div className="flex overflow-x-auto pb-4 lg:pb-0 gap-4 lg:gap-8 snap-x hide-scrollbar -mx-4 px-4 lg:mx-0 lg:px-0">
-            {[
-              { icon: Sparkles, text: "Cleaning Services" },
-              { icon: Bug, text: "Pest Control" },
-              { icon: Paintbrush, text: "Painting" },
-              { icon: Truck, text: "Moving Services" }
-            ].map((item, idx) => (
-              <div key={idx} className="flex-shrink-0 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 group cursor-pointer text-center lg:text-left min-w-[100px] lg:min-w-0 snap-start">
-                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                  <item.icon size={20} className="lg:w-6 lg:h-6" />
+          {/* Mobile Marquee / Desktop Grid of Services */}
+          <div className="overflow-hidden -mx-4 px-4 lg:mx-0 lg:px-0">
+            <div className="flex lg:grid lg:grid-cols-4 gap-4 lg:gap-8 pb-4 lg:pb-0 animate-marquee lg:animate-none">
+              {[
+                { icon: Sparkles, text: "Cleaning Services" },
+                { icon: Bug, text: "Pest Control" },
+                { icon: Paintbrush, text: "Painting" },
+                { icon: Truck, text: "Moving Services" },
+                // Duplicate for seamless loop on mobile
+                { icon: Sparkles, text: "Cleaning Services" },
+                { icon: Bug, text: "Pest Control" },
+                { icon: Paintbrush, text: "Painting" },
+                { icon: Truck, text: "Moving Services" }
+              ].map((item, idx) => (
+                <div key={idx} className={`flex-shrink-0 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 group cursor-pointer text-center lg:text-left min-w-[100px] lg:min-w-0 ${idx >= 4 ? 'lg:hidden' : ''}`}>
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <item.icon size={20} className="lg:w-6 lg:h-6" />
+                  </div>
+                  <span className="font-bold text-slate-700 text-xs lg:text-base group-hover:text-emerald-600 transition-colors whitespace-nowrap lg:whitespace-normal">{item.text}</span>
                 </div>
-                <span className="font-bold text-slate-700 text-xs lg:text-base group-hover:text-emerald-600 transition-colors whitespace-nowrap lg:whitespace-normal">{item.text}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="w-full lg:w-auto">
