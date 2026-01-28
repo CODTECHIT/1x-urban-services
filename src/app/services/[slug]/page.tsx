@@ -121,13 +121,13 @@ export default async function ServiceDetailPage({ params }: Props) {
                                 : `/images/services/${service.slug}.png`;
 
                             return (
-                                <Reveal key={subService.id} direction="up" delay={i * 0.1}>
+                                <Reveal key={subService.id} direction="up" delay={i * 0.1} width="100%" className="h-full">
                                     <Link
                                         href={`/services/${service.slug}/${subService.id}`}
-                                        className="group block cursor-pointer"
+                                        className="group flex flex-col h-full cursor-pointer"
                                     >
                                         {/* Sub-Service Image */}
-                                        <div className="relative overflow-hidden rounded-[2.5rem] mb-6 aspect-[4/3] bg-slate-100">
+                                        <div className="relative overflow-hidden rounded-[2.5rem] mb-6 aspect-[4/3] bg-slate-100 w-full">
                                             <Image
                                                 src={imagePath}
                                                 alt={subService.name}
@@ -143,19 +143,21 @@ export default async function ServiceDetailPage({ params }: Props) {
                                             </div>
                                         </div>
 
-                                        {/* Sub-service Name */}
-                                        <h3 className="text-xl font-black mb-3 group-hover:text-emerald-600 transition-colors">
-                                            {subService.name}
-                                        </h3>
+                                        <div className="flex flex-col flex-1">
+                                            {/* Sub-service Name */}
+                                            <h3 className="text-xl font-black mb-3 group-hover:text-emerald-600 transition-colors">
+                                                {subService.name}
+                                            </h3>
 
-                                        {/* Description */}
-                                        <p className="text-slate-600 font-bold text-sm mb-4 leading-relaxed">
-                                            {subService.shortDesc}
-                                        </p>
+                                            {/* Description */}
+                                            <p className="text-slate-600 font-bold text-sm mb-4 leading-relaxed line-clamp-3">
+                                                {subService.shortDesc}
+                                            </p>
 
-                                        {/* View Details Link */}
-                                        <div className="flex items-center gap-2 text-emerald-600 font-black text-xs mt-2 group-hover:gap-4 transition-all uppercase tracking-widest">
-                                            View Details <ArrowRight size={14} />
+                                            {/* View Details Link */}
+                                            <div className="mt-auto flex items-center gap-2 text-emerald-600 font-black text-xs group-hover:gap-4 transition-all uppercase tracking-widest">
+                                                View Details <ArrowRight size={14} />
+                                            </div>
                                         </div>
                                     </Link>
                                 </Reveal>

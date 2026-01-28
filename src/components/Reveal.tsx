@@ -9,9 +9,10 @@ interface Props {
     direction?: "up" | "down" | "left" | "right";
     delay?: number;
     overflow?: "hidden" | "visible";
+    className?: string; // Added className prop
 }
 
-export const Reveal = ({ children, width = "fit-content", direction = "up", delay = 0.25, overflow = "hidden" }: Props) => {
+export const Reveal = ({ children, width = "fit-content", direction = "up", delay = 0.25, overflow = "hidden", className = "" }: Props) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -37,12 +38,13 @@ export const Reveal = ({ children, width = "fit-content", direction = "up", dela
     };
 
     return (
-        <div ref={ref} style={{ position: "relative", width, overflow }}>
+        <div ref={ref} style={{ position: "relative", width, overflow }} className={className}>
             <motion.div
                 variants={variants}
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration: 0.5, delay, ease: "easeOut" }}
+                className="h-full" // Ensure motion div takes full height too if needed
             >
                 {children}
             </motion.div>
