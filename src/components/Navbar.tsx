@@ -44,9 +44,9 @@ export const Navbar = ({ activePage, onNavigate }: NavbarProps) => {
         <>
             <nav className={`fixed top-0 w-full z-[100] transition-all duration-700 ${scrolled || pathname !== '/' ? 'bg-white/80 backdrop-blur-2xl py-3 md:py-5 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]' : 'bg-transparent py-4 md:py-10'}`}>
                 <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-                    <div className="flex items-center gap-3 md:gap-4 cursor-pointer group -ml-[5%]" onClick={() => handleLinkClick('home')}>
-                        <div className="relative w-56 h-16 md:w-72 md:h-24 flex items-center justify-center transition-transform hover:scale-105">
-                            <Image src="/logo.png" alt="1x Urban Services" fill className="object-contain" priority />
+                    <div className="flex items-center gap-3 md:gap-4 cursor-pointer group" onClick={() => handleLinkClick('home')}>
+                        <div className="relative w-64 h-20 md:w-80 md:h-28 transition-transform hover:scale-105">
+                            <Image src="/logo-v2.png" alt="1x Urban Services" fill className="object-contain object-left" priority />
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@ export const Navbar = ({ activePage, onNavigate }: NavbarProps) => {
                 <div className="flex justify-between items-center p-4 md:p-6 border-b border-white/10">
                     <div className="flex items-center gap-3">
                         <div className="relative w-48 h-14 flex items-center justify-center">
-                            <Image src="/logo.png" alt="1x Urban Services" fill className="object-contain" />
+                            <Image src="/logo-v2.png" alt="1x Urban Services" fill className="object-contain" />
                         </div>
                     </div>
                     <button

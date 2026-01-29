@@ -29,7 +29,7 @@ export const FloatingContact = () => {
 
                 {/* Call */}
                 <a
-                    href={`tel:${WHATSAPP_NUMBER}`}
+                    href={`tel:+${WHATSAPP_NUMBER}`}
                     className="w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-all hover:scale-110 active:scale-95 group"
                     title="Call Us"
                 >

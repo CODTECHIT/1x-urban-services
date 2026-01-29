@@ -3,20 +3,19 @@
 @theme {
   --font-outfit: var(--font-outfit);
 
-  /* Override emerald colors with Deep Forest Green palette */
-  --color-emerald-50: #e6f4ed;
-  --color-emerald-100: #ccead9;
-  --color-emerald-200: #99d5b3;
-  --color-emerald-300: #66c08d;
-  --color-emerald-400: #33ab67;
-  --color-emerald-500: #006838;
-  /* Primary Green - Deep Forest Green */
-  --color-emerald-600: #006838;
-  /* Primary Green - Deep Forest Green */
-  --color-emerald-700: #005530;
-  --color-emerald-800: #004228;
-  --color-emerald-900: #002f20;
-  --color-emerald-950: #001c14;
+  /* Override emerald colors with Standard Tailwind / User Requested Palette */
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  /* Core Brand Color */
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
 
   /* Action Gold for CTAs */
   --color-amber-200: #FFE082;
@@ -28,18 +27,6 @@
   --color-amber-600: #FFB300;
   /* Slightly darker gold */
 
-  /* Surface colors */
-  --color-slate-50: #F4F7F6;
-  /* Surface Gray - Cool Off-White */
-
-  /* Text colors - using Text Charcoal */
-  --color-slate-600: #5a6268;
-  --color-slate-700: #2D3436;
-  /* Text Charcoal */
-  --color-slate-800: #2D3436;
-  /* Text Charcoal */
-  --color-slate-900: #1a1d1f;
-
   /* Teal colors for gradients */
   --color-teal-800: #115e59;
   --color-teal-900: #134e4a;
@@ -49,18 +36,17 @@
   --background: #ffffff;
   --foreground: #2D3436;
   /* Text Charcoal - softer than pure black */
-  --primary: #006838;
-  /* Primary Green - Deep Forest Green */
-  --primary-dark: #004d28;
-  /* Darker shade of Primary Green */
-  --primary-light: #e6f4ed;
-  /* Lighter tint of Primary Green */
+  --primary: #059669;
+  /* Emerald 600 - Core Brand Color */
+  --primary-dark: #047857;
+  /* Emerald 700 */
+  --primary-light: #ecfdf5;
+  /* Emerald 50 */
   --accent: #FFC107;
   /* Action Gold - for CTAs and highlights */
   --surface: #F4F7F6;
   /* Surface Gray - Cool Off-White for backgrounds */
   --secondary: #64748b;
-  --black: #000000;
   --white: #ffffff;
 }
 
@@ -209,8 +195,10 @@ body {
 
 /* Selection color */
 ::selection {
-  background-color: var(--primary-light);
-  color: var(--primary-dark);
+  background-color: #a7f3d0;
+  /* Emerald 200 */
+  color: #022c22;
+  /* Emerald 950 for contrast */
 }
 
 /* Custom Scrollbar */

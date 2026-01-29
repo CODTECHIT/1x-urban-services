@@ -11,13 +11,13 @@ import {
   ChevronRight,
   ShieldCheck,
   Globe,
+  Paintbrush,
+  Bug,
+  Truck,
   Zap,
   CheckCircle2,
   Sparkles,
-  Bug,
-  Truck,
   Wrench,
-  Paintbrush,
   Layout
 } from 'lucide-react';
 
@@ -48,12 +48,17 @@ const Hero = () => (
     <div className="container mx-auto px-6 relative z-10">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
-        <div className="space-y-6 lg:space-y-7 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+        <div className="space-y-6 lg:space-y-7 max-w-2xl text-center mx-auto lg:mx-0 lg:text-left">
           <Reveal direction="up" delay={0.2} width="100%">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight text-slate-800">
-              Your <span className="text-emerald-700">one-stop solution</span> <br className="hidden sm:block" />
-              for all home <span className="text-emerald-700">needs</span>
+            <h1 className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4 mb-4 leading-none">
+              <span className="text-7xl sm:text-8xl lg:text-9xl font-black italic tracking-tighter text-emerald-500">
+                1x
+              </span>
+              <span className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-emerald-600">Urban Services</span>
             </h1>
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold leading-[1.2] tracking-tight text-slate-700">
+              Your <span className="text-emerald-600">one-stop solution</span> for all home <span className="text-emerald-600">needs</span>
+            </h2>
           </Reveal>
 
           <Reveal direction="up" delay={0.4} width="100%">
@@ -344,6 +349,32 @@ const ContactUs = () => {
   );
 };
 
+const KeyFeatures = () => (
+  <section className="py-8 lg:py-10 bg-emerald-50 border-y border-emerald-100/50 overflow-hidden">
+    <div className="container mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
+        {[
+          { icon: Zap, title: "Super Fast", desc: "Quick Service", color: "text-amber-500", bg: "bg-amber-100" },
+          { icon: ShieldCheck, title: "100% Secure", desc: "Verified Makers", color: "text-emerald-600", bg: "bg-emerald-100" },
+          { icon: Award, title: "Best Price", desc: "Affordable", color: "text-blue-500", bg: "bg-blue-100" }
+        ].map((feat, i) => (
+          <Reveal key={i} direction="up" delay={i * 0.1} width="100%">
+            <div className="bg-white rounded-2xl p-4 lg:p-5 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100/50 group cursor-default">
+              <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl ${feat.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                <feat.icon size={24} className={`${feat.color}`} />
+              </div>
+              <div>
+                <h4 className="font-black text-slate-800 text-sm lg:text-base uppercase tracking-tight">{feat.title}</h4>
+                <p className="text-xs font-bold text-slate-500">{feat.desc}</p>
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const ServicesSection = () => {
   const services = [
     {
@@ -351,6 +382,8 @@ const ServicesSection = () => {
       name: "Home Cleaning Services",
       desc: "Professional home cleaning solutions designed to keep your living spaces hygienic, fresh, and comfortable.",
       icon: <Sparkles className="text-emerald-500" size={32} />,
+      slug: "home-cleaning",
+      image: "/images/services/home-cleaning.png",
       subs: [
         "Bathroom Cleaning", "Balcony Cleaning", "Window Cleaning",
         "Fridge Cleaning", "Kitchen Cleaning", "Floor Cleaning",
@@ -363,6 +396,8 @@ const ServicesSection = () => {
       name: "Pest Control Services",
       desc: "Reliable and safe pest control services to protect your home from harmful insects and pests.",
       icon: <Bug className="text-emerald-500" size={32} />,
+      slug: "pest-control",
+      image: "/images/services/pest-control-main.jpg",
       subs: [
         "Cockroach & Ant Control", "General Pest Control",
         "Bed Bug Control", "Termite Control"
@@ -373,6 +408,8 @@ const ServicesSection = () => {
       name: "Packers & Movers",
       desc: "Professional packing and moving solutions for safe and hassle-free relocation across India.",
       icon: <Truck className="text-emerald-500" size={32} />,
+      slug: "packers-movers",
+      image: "/images/services/packers-movers-main-v2.jpg",
       subs: [
         "Home Shifting", "Office Relocation",
         "Safe Packing & Transportation"
@@ -383,6 +420,8 @@ const ServicesSection = () => {
       name: "Electrical & Plumbing",
       desc: "Skilled technicians handle everyday electrical and plumbing needs with precision and reliability.",
       icon: <Wrench className="text-emerald-500" size={32} />,
+      slug: "electrical-plumbing",
+      image: "/images/services/sub/electrical-services-v2.jpg",
       subs: [
         "Electrical Repairs & Fittings", "Plumbing Repairs & Maintenance"
       ]
@@ -392,6 +431,8 @@ const ServicesSection = () => {
       name: "Home Painting Services",
       desc: "Professional home painting services that enhance the appearance and protection of your home.",
       icon: <Paintbrush className="text-emerald-500" size={32} />,
+      slug: "home-painting",
+      image: "/images/services/home-painting.png",
       subs: ["Interior Painting", "Exterior Painting", "Texture Painting"]
     },
     {
@@ -399,6 +440,8 @@ const ServicesSection = () => {
       name: "Civil & Interior Design",
       desc: "Complete civil and interior solutions, from planning to execution, tailored to your needs.",
       icon: <Layout className="text-emerald-500" size={32} />,
+      slug: "civil-interior",
+      image: "/images/services/civil-interior.png",
       subs: ["Civil Works", "Interior Design & Execution"]
     }
   ];
@@ -418,34 +461,24 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8">
           {services.map((s, i) => {
-            const slugMap: { [key: string]: string } = {
-              "Home Cleaning Services": "home-cleaning",
-              "Pest Control Services": "pest-control",
-              "Packers & Movers": "packers-movers",
-              "Electrical & Plumbing": "electrical-plumbing",
-              "Home Painting Services": "home-painting",
-              "Civil & Interior Design": "civil-interior"
-            };
-            const slug = slugMap[s.name];
-
             return (
               <Reveal key={i} direction="up" delay={i * 0.1}>
                 <a
-                  href={`/services/${slug}`}
+                  href={`/services/${s.slug}`}
                   className="block group cursor-pointer"
                 >
                   {/* Service Image */}
                   <div className="relative overflow-hidden rounded-[1.5rem] mb-4 aspect-[4/3] bg-slate-100">
                     <Image
-                      src={`/images/services/${slug}.png`}
+                      src={s.image}
                       alt={s.name}
                       width={500}
                       height={375}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 via-emerald-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
 
                   {/* Service Name */}
@@ -516,9 +549,9 @@ const VisionSection = () => (
             desc: "Your satisfaction is our priority. We listen, we deliver, and we stand by our work every time."
           }
         ].map((item, i) => (
-          <Reveal key={i} direction="up" delay={i * 0.2}>
+          <Reveal key={i} direction="up" delay={i * 0.2} className="h-full" width="100%">
             <div
-              className="group p-8 lg:p-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] hover:bg-white/15 hover:border-white/30 transition-all duration-500 relative overflow-hidden"
+              className="h-full flex flex-col justify-center group p-8 lg:p-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] hover:bg-white/15 hover:border-white/30 transition-all duration-500 relative overflow-hidden"
             >
               {/* Icon Circle */}
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500">
@@ -569,6 +602,7 @@ function HomeContent() {
         {activePage === 'home' && (
           <main>
             <Hero />
+            <KeyFeatures />
             <ServicesSection />
             <ExperienceStats />
             <AboutSection />

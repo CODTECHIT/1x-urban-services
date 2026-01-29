@@ -21,7 +21,7 @@ export const WhatsAppBtn = ({ text = "WhatsApp Us", className = "", message = "H
 
 export const CallBtn = ({ text = `Call Now: ${PHONE_DISPLAY}`, className = "" }: { text?: string, className?: string }) => (
     <a
-        href={`tel:${WHATSAPP_NUMBER}`}
+        href={`tel:+${WHATSAPP_NUMBER}`}
         className={`flex items-center justify-center gap-2 border-2 border-emerald-800 text-emerald-900 bg-white hover:bg-emerald-50 px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 active:scale-95 ${className}`}
     >
         <Phone size={20} />

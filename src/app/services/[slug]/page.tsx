@@ -73,7 +73,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
                     <Reveal direction="down" delay={0.1}>
                         <Link
-                            href="/services"
+                            href="/#services"
                             className="inline-flex items-center gap-2 text-emerald-400 font-bold mb-8 hover:gap-3 transition-all mx-auto md:mx-0"
                         >
                             <ArrowLeft size={20} /> Back to All Services
@@ -105,20 +105,31 @@ export default async function ServiceDetailPage({ params }: Props) {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {service.subServices.map((subService, i) => {
                             // Check if this sub-service has a specific image (we have generated a few key ones)
+                            // Custom map for specific versioned images to bypass cache
+                            const customImages: { [key: string]: string } = {
+                                'kitchen-cleaning': '/images/services/sub/kitchen-cleaning-v2.jpg',
+                                'cockroach-ant-control': '/images/services/sub/cockroach-ant-control-v2.png',
+                                'termite-control': '/images/services/sub/termite-control-v2.jpg',
+                                'office-relocation': '/images/services/sub/office-relocation.jpg',
+                                'home-shifting': '/images/services/sub/home-shifting-v2.png',
+                                'electrical-services': '/images/services/sub/electrical-services-v2.jpg'
+                            };
+
                             const specificImageIds = [
-                                'bathroom-cleaning', 'kitchen-cleaning', 'sofa-cleaning',
-                                'termite-control', 'cockroach-ant-control', 'home-shifting',
+                                'bathroom-cleaning', 'sofa-cleaning',
                                 'balcony-cleaning', 'window-cleaning',
                                 'fridge-cleaning', 'floor-cleaning', 'carpet-cleaning',
                                 'mattress-cleaning', 'water-tank-cleaning',
                                 'bed-bug-control', 'packing-transportation', 'plumbing-services',
-                                'exterior-painting', 'texture-painting', 'civil-works'
+                                'exterior-painting', 'texture-painting', 'civil-works',
+                                'general-pest-control'
                             ];
                             const hasSpecificImage = specificImageIds.includes(subService.id);
 
-                            const imagePath = hasSpecificImage
+                            // Priority: Custom Image -> Specific ID based Image -> Default Slug Image
+                            const imagePath = customImages[subService.id] || (hasSpecificImage
                                 ? `/images/services/sub/${subService.id}.png`
-                                : `/images/services/${service.slug}.png`;
+                                : `/images/services/${service.slug}.png`);
 
                             return (
                                 <Reveal key={subService.id} direction="up" delay={i * 0.1} width="100%" className="h-full">

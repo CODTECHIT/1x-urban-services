@@ -28,7 +28,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                     <div className="space-y-6 md:space-y-8">
                         <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleLinkClick('home')}>
                             <div className="relative w-32 h-14 md:w-56 md:h-16 transition-transform hover:scale-105">
-                                <Image src="/logo.png" alt="1x Urban Services" fill className="object-contain" />
+                                <Image src="/logo-v2.png" alt="1x Urban Services" fill className="object-contain" />
                             </div>
                         </div>
                         <p className="text-slate-500 leading-relaxed font-bold text-sm md:text-base">Your trusted partner for professional home services. Delivering quality, safety, and customer satisfaction for over a decade.</p>
