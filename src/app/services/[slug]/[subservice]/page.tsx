@@ -121,7 +121,9 @@ export default async function SubServiceDetailPage({ params }: Props) {
                                 'home-shifting': '/images/services/sub/home-shifting-v2.png',
                                 'electrical-services': '/images/services/sub/electrical-services-v2.jpg',
                                 'balcony-cleaning': '/images/services/sub/balcony-cleaning-v2.jpg',
-                                'window-cleaning': '/images/services/sub/window-cleaning-v2.jpg'
+                                'window-cleaning': '/images/services/sub/window-cleaning-v2.jpg',
+                                'sofa-cleaning': '/images/services/sub/sofa-cleaning-v2.jpg',
+                                'water-tank-cleaning': '/images/services/sub/water-tank-cleaning-v2.jpg'
                             };
 
                             const specificImageIds = [
