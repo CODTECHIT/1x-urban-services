@@ -113,19 +113,31 @@ export default async function SubServiceDetailPage({ params }: Props) {
                     {/* Hero Action Image for the Sub-service */}
                     <div className="mb-20">
                         {(() => {
+                            const customImages: { [key: string]: string } = {
+                                'kitchen-cleaning': '/images/services/sub/kitchen-cleaning-v2.jpg',
+                                'cockroach-ant-control': '/images/services/sub/cockroach-ant-control-v2.png',
+                                'termite-control': '/images/services/sub/termite-control-v2.jpg',
+                                'office-relocation': '/images/services/sub/office-relocation.jpg',
+                                'home-shifting': '/images/services/sub/home-shifting-v2.png',
+                                'electrical-services': '/images/services/sub/electrical-services-v2.jpg',
+                                'balcony-cleaning': '/images/services/sub/balcony-cleaning-v2.jpg'
+                            };
+
                             const specificImageIds = [
-                                'bathroom-cleaning', 'kitchen-cleaning', 'sofa-cleaning',
-                                'termite-control', 'cockroach-ant-control', 'home-shifting',
+                                'bathroom-cleaning', 'sofa-cleaning',
                                 'balcony-cleaning', 'window-cleaning',
                                 'fridge-cleaning', 'floor-cleaning', 'carpet-cleaning',
                                 'mattress-cleaning', 'water-tank-cleaning',
                                 'bed-bug-control', 'packing-transportation', 'plumbing-services',
-                                'exterior-painting', 'texture-painting', 'civil-works'
+                                'exterior-painting', 'texture-painting', 'civil-works',
+                                'general-pest-control'
                             ];
+
                             const hasSpecificImage = specificImageIds.includes(subService.id);
-                            const imagePath = hasSpecificImage
+
+                            const imagePath = customImages[subService.id] || (hasSpecificImage
                                 ? `/images/services/sub/${subService.id}.png`
-                                : `/images/services/${service.slug}.png`;
+                                : `/images/services/${service.slug}.png`);
 
                             return (
                                 <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden rounded-[2rem] md:rounded-[3rem] shadow-2xl border border-white/20">
