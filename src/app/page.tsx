@@ -199,8 +199,8 @@ const AboutSection = () => (
       <div className="relative order-2 lg:order-1">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
           {/* Visionary Approach Card */}
-          <Reveal direction="up" delay={0.1}>
-            <div className="bg-white rounded-[2rem] p-8 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100">
+          <Reveal direction="up" delay={0.1} className="h-full" width="100%">
+            <div className="h-full bg-white rounded-[2rem] p-8 lg:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 flex flex-col justify-center">
               <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-emerald-100 flex items-center justify-center mb-6 lg:mb-4">
                 <Target size={24} className="text-emerald-600 lg:w-5 lg:h-5" />
               </div>
@@ -210,8 +210,8 @@ const AboutSection = () => (
           </Reveal>
 
           {/* Proven Integrity Card */}
-          <Reveal direction="up" delay={0.2}>
-            <div className="bg-slate-800 rounded-[2rem] p-8 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 text-white">
+          <Reveal direction="up" delay={0.2} className="h-full" width="100%">
+            <div className="h-full bg-slate-800 rounded-[2rem] p-8 lg:p-6 shadow-[0_10px_30px_rgba(30,41,59,0.2)] hover:shadow-[0_20px_40px_rgba(30,41,59,0.4)] transition-all duration-500 text-white flex flex-col justify-center">
               <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mb-6 lg:mb-4">
                 <ShieldCheck size={24} className="text-emerald-400 lg:w-5 lg:h-5" />
               </div>
@@ -221,8 +221,8 @@ const AboutSection = () => (
           </Reveal>
 
           {/* Skilled Professionals Card */}
-          <Reveal direction="up" delay={0.3}>
-            <div className="bg-white rounded-[2rem] p-8 lg:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100">
+          <Reveal direction="up" delay={0.3} className="h-full" width="100%">
+            <div className="h-full bg-white rounded-[2rem] p-8 lg:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border border-slate-100 flex flex-col justify-center">
               <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-emerald-100 flex items-center justify-center mb-6 lg:mb-4">
                 <Users size={24} className="text-emerald-600 lg:w-5 lg:h-5" />
               </div>
@@ -232,8 +232,8 @@ const AboutSection = () => (
           </Reveal>
 
           {/* 1x Quality Assured Card - Large */}
-          <Reveal direction="up" delay={0.4}>
-            <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[2rem] p-10 lg:p-8 shadow-2xl shadow-emerald-200/50 flex flex-col justify-center items-center text-center text-white hover:scale-105 transition-all duration-500">
+          <Reveal direction="up" delay={0.4} className="h-full" width="100%">
+            <div className="h-full bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[2rem] p-10 lg:p-8 shadow-[0_20px_50px_rgba(16,185,129,0.3)] hover:shadow-[0_30px_60px_rgba(16,185,129,0.4)] flex flex-col justify-center items-center text-center text-white hover:scale-105 transition-all duration-500">
               <p className="text-5xl lg:text-4xl font-black mb-2">1x</p>
               <div className="h-1 w-12 bg-emerald-300 rounded-full mb-4"></div>
               <p className="text-xs lg:text-[10px] font-black uppercase tracking-[0.2em] text-emerald-50">Quality Assured</p>
