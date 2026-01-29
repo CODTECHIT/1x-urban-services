@@ -113,7 +113,8 @@ export default async function ServiceDetailPage({ params }: Props) {
                                 'office-relocation': '/images/services/sub/office-relocation.jpg',
                                 'home-shifting': '/images/services/sub/home-shifting-v2.png',
                                 'electrical-services': '/images/services/sub/electrical-services-v2.jpg',
-                                'balcony-cleaning': '/images/services/sub/balcony-cleaning-v2.jpg'
+                                'balcony-cleaning': '/images/services/sub/balcony-cleaning-v2.jpg',
+                                'window-cleaning': '/images/services/sub/window-cleaning-v2.jpg'
                             };
 
                             const specificImageIds = [
