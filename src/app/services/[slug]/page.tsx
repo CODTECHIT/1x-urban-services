@@ -116,7 +116,8 @@ export default async function ServiceDetailPage({ params }: Props) {
                                 'balcony-cleaning': '/images/services/sub/balcony-cleaning-v2.jpg',
                                 'window-cleaning': '/images/services/sub/window-cleaning-v2.jpg',
                                 'sofa-cleaning': '/images/services/sub/sofa-cleaning-v2.jpg',
-                                'water-tank-cleaning': '/images/services/sub/water-tank-cleaning-v2.jpg'
+                                'water-tank-cleaning': '/images/services/sub/water-tank-cleaning-v2.jpg',
+                                'interior-painting': '/images/services/sub/interior-painting-v2.png'
                             };
 
                             const specificImageIds = [

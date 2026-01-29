@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from 'react';
-import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
+import React, { useState, useEffect, Suspense } from "react";
+import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import {
   Phone,
   Users,
@@ -18,15 +18,20 @@ import {
   CheckCircle2,
   Sparkles,
   Wrench,
-  Layout
-} from 'lucide-react';
+  Layout,
+} from "lucide-react";
 
-import { WhatsAppBtn, CallBtn, WHATSAPP_NUMBER, PHONE_DISPLAY } from '@/components/Shared';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
-import { AnimatedCounter } from '@/components/AnimatedCounter';
+import {
+  WhatsAppBtn,
+  CallBtn,
+  WHATSAPP_NUMBER,
+  PHONE_DISPLAY,
+} from "@/components/Shared";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
-import { Reveal } from '@/components/Reveal';
+import { Reveal } from "@/components/Reveal";
 
 const Hero = () => (
   <section className="relative min-h-[85vh] flex flex-col pt-28 lg:pt-32 pb-8 lg:pb-16 overflow-hidden bg-white">
@@ -54,22 +59,32 @@ const Hero = () => (
               <span className="text-7xl sm:text-8xl lg:text-9xl font-black italic tracking-tighter text-emerald-500">
                 1x
               </span>
-              <span className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-emerald-600">Urban Services</span>
+              <span className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-emerald-600">
+                Urban Services
+              </span>
             </h1>
             <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold leading-[1.2] tracking-tight text-slate-700">
-              Your <span className="text-emerald-600">one-stop solution</span> for all home <span className="text-emerald-600">needs</span>
+              Your <span className="text-emerald-600">one-stop solution</span>{" "}
+              for all home <span className="text-emerald-600">needs</span>
             </h2>
           </Reveal>
 
           <Reveal direction="up" delay={0.4} width="100%">
             <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Professional and affordable home services with <span className="font-bold text-slate-700">10+ years of experience</span> in deep cleaning, pest control, painting, and more.
+              Professional and affordable home services with{" "}
+              <span className="font-bold text-slate-700">
+                10+ years of experience
+              </span>{" "}
+              in deep cleaning, pest control, painting, and more.
             </p>
           </Reveal>
 
           <Reveal direction="up" delay={0.6} width="100%">
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 lg:gap-4 pt-2 lg:pt-3">
-              <WhatsAppBtn text="Get a Free Quote" className="!w-full sm:!w-auto !bg-[#fbbf24] !text-slate-900 border-b-4 border-[#d97706] hover:!bg-[#f59e0b] !shadow-xl !shadow-amber-900/20 active:border-b-0 active:translate-y-1" />
+              <WhatsAppBtn
+                text="Get a Free Quote"
+                className="!w-full sm:!w-auto !bg-[#fbbf24] !text-slate-900 border-b-4 border-[#d97706] hover:!bg-[#f59e0b] !shadow-xl !shadow-amber-900/20 active:border-b-0 active:translate-y-1"
+              />
               <CallBtn className="!w-full sm:!w-auto" />
             </div>
           </Reveal>
@@ -82,9 +97,7 @@ const Hero = () => (
             <div className="relative group">
               {/* Main Character Image */}
               <div className="relative w-[260px] h-[300px] lg:w-[400px] lg:h-[440px] z-10 lg:mr-12">
-                <div
-                  className="absolute inset-0 rounded-[2.5rem] overflow-hidden"
-                >
+                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
                   <Image
                     src="/hero-image.jpg"
                     alt="Service Professional"
@@ -102,27 +115,39 @@ const Hero = () => (
                   <ShieldCheck size={14} className="lg:w-4 lg:h-4" />
                 </div>
                 <div>
-                  <p className="text-[7px] lg:text-[9px] uppercase font-bold text-slate-400">100% Secure</p>
-                  <p className="text-[11px] lg:text-xs font-bold text-slate-700">Verified Experts</p>
+                  <p className="text-[7px] lg:text-[9px] uppercase font-bold text-slate-400">
+                    100% Secure
+                  </p>
+                  <p className="text-[11px] lg:text-xs font-bold text-slate-700">
+                    Verified Experts
+                  </p>
                 </div>
               </div>
 
               {/* Global Scale - Middle Left */}
               <div className="absolute top-20 -left-8 lg:top-24 lg:-left-12 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex flex-col items-center gap-1 animate-float stagger-2 z-20 text-center w-20 lg:w-28 hidden sm:flex">
                 <Globe className="text-emerald-500 w-5 h-5 lg:w-7 lg:h-7" />
-                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Global Scale</p>
+                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">
+                  Global Scale
+                </p>
               </div>
 
               {/* Top Rated - Middle Right */}
               <div className="absolute bottom-24 -right-10 lg:bottom-32 lg:-right-8 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex flex-col items-center gap-1 animate-float stagger-1 z-20 text-center w-20 lg:w-28 hidden sm:flex">
                 <Award className="text-emerald-500 w-5 h-5 lg:w-7 lg:h-7" />
-                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Top Rated</p>
+                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">
+                  Top Rated
+                </p>
               </div>
 
               {/* Quality Service - Bottom Left */}
               <div className="absolute bottom-6 -left-4 lg:bottom-10 lg:left-0 bg-white p-2.5 lg:p-3.5 rounded-xl lg:rounded-2xl shadow-xl flex items-center gap-2 animate-float stagger-3 z-20 max-w-[160px] lg:max-w-[200px] hidden sm:flex">
-                <div className="bg-emerald-600 text-white text-[9px] lg:text-[11px] font-black px-1.5 py-0.5 rounded">1x</div>
-                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">Quality Service</p>
+                <div className="bg-emerald-600 text-white text-[9px] lg:text-[11px] font-black px-1.5 py-0.5 rounded">
+                  1x
+                </div>
+                <p className="text-[9px] lg:text-[11px] font-bold text-slate-700">
+                  Quality Service
+                </p>
               </div>
             </div>
           </div>
@@ -142,13 +167,18 @@ const Hero = () => (
                 { icon: Sparkles, text: "Cleaning Services" },
                 { icon: Bug, text: "Pest Control" },
                 { icon: Paintbrush, text: "Painting" },
-                { icon: Truck, text: "Moving Services" }
+                { icon: Truck, text: "Moving Services" },
               ].map((item, idx) => (
-                <div key={idx} className={`flex-shrink-0 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 group cursor-pointer text-center lg:text-left min-w-[100px] lg:min-w-0 ${idx >= 4 ? 'lg:hidden' : ''}`}>
+                <div
+                  key={idx}
+                  className={`flex-shrink-0 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 group cursor-pointer text-center lg:text-left min-w-[100px] lg:min-w-0 ${idx >= 4 ? "lg:hidden" : ""}`}
+                >
                   <div className="w-12 h-12 lg:w-14 lg:h-14 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                     <item.icon size={20} className="lg:w-6 lg:h-6" />
                   </div>
-                  <span className="font-bold text-slate-700 text-xs lg:text-base group-hover:text-emerald-600 transition-colors whitespace-nowrap lg:whitespace-normal">{item.text}</span>
+                  <span className="font-bold text-slate-700 text-xs lg:text-base group-hover:text-emerald-600 transition-colors whitespace-nowrap lg:whitespace-normal">
+                    {item.text}
+                  </span>
                 </div>
               ))}
             </div>
@@ -178,8 +208,16 @@ const ExperienceStats = () => (
         {[
           { label: "Years Experience", value: "10+", sub: "Trusted Service" },
           { label: "Happy Customers", value: "5000+", sub: "Homes Served" },
-          { label: "Services Completed", value: "15k+", sub: "Quality Guaranteed" },
-          { label: "Expert Technicians", value: "50+", sub: "Trained Professionals" },
+          {
+            label: "Services Completed",
+            value: "15k+",
+            sub: "Quality Guaranteed",
+          },
+          {
+            label: "Expert Technicians",
+            value: "50+",
+            sub: "Trained Professionals",
+          },
         ].map((stat, idx) => (
           <Reveal key={idx} direction="up" delay={idx * 0.1}>
             <div className="group cursor-default text-center lg:text-left">
@@ -187,8 +225,12 @@ const ExperienceStats = () => (
                 <AnimatedCounter value={stat.value} />
               </div>
               <div className="h-1 w-12 bg-emerald-500 mb-4 group-hover:w-full transition-all duration-700 rounded-full mx-auto lg:mx-0"></div>
-              <p className="text-emerald-500 font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs mb-1">{stat.label}</p>
-              <p className="text-slate-500 text-xs sm:text-sm font-bold">{stat.sub}</p>
+              <p className="text-emerald-500 font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs mb-1">
+                {stat.label}
+              </p>
+              <p className="text-slate-500 text-xs sm:text-sm font-bold">
+                {stat.sub}
+              </p>
             </div>
           </Reveal>
         ))}
@@ -198,7 +240,10 @@ const ExperienceStats = () => (
 );
 
 const AboutSection = () => (
-  <section id="about" className="py-20 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+  <section
+    id="about"
+    className="py-20 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden"
+  >
     <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
       {/* Left Side - Feature Cards */}
       <div className="relative order-2 lg:order-1">
@@ -209,8 +254,12 @@ const AboutSection = () => (
               <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-emerald-100 flex items-center justify-center mb-6 lg:mb-4">
                 <Target size={24} className="text-emerald-600 lg:w-5 lg:h-5" />
               </div>
-              <h4 className="text-xl lg:text-lg font-black mb-3 lg:mb-2 text-slate-800">Visionary Approach</h4>
-              <p className="text-sm lg:text-xs text-slate-600 leading-relaxed">Leading with innovation and future-proof logic.</p>
+              <h4 className="text-xl lg:text-lg font-black mb-3 lg:mb-2 text-slate-800">
+                Visionary Approach
+              </h4>
+              <p className="text-sm lg:text-xs text-slate-600 leading-relaxed">
+                Leading with innovation and future-proof logic.
+              </p>
             </div>
           </Reveal>
 
@@ -218,10 +267,17 @@ const AboutSection = () => (
           <Reveal direction="up" delay={0.2} className="h-full" width="100%">
             <div className="h-full bg-slate-800 rounded-[2rem] p-8 lg:p-6 shadow-[0_10px_30px_rgba(30,41,59,0.2)] hover:shadow-[0_20px_40px_rgba(30,41,59,0.4)] transition-all duration-500 text-white flex flex-col justify-center">
               <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mb-6 lg:mb-4">
-                <ShieldCheck size={24} className="text-emerald-400 lg:w-5 lg:h-5" />
+                <ShieldCheck
+                  size={24}
+                  className="text-emerald-400 lg:w-5 lg:h-5"
+                />
               </div>
-              <h4 className="text-xl lg:text-lg font-black mb-3 lg:mb-2">Proven Integrity</h4>
-              <p className="text-sm lg:text-xs text-slate-300 leading-relaxed">10+ years of unwavering market trust.</p>
+              <h4 className="text-xl lg:text-lg font-black mb-3 lg:mb-2">
+                Proven Integrity
+              </h4>
+              <p className="text-sm lg:text-xs text-slate-300 leading-relaxed">
+                10+ years of unwavering market trust.
+              </p>
             </div>
           </Reveal>
 
@@ -231,8 +287,12 @@ const AboutSection = () => (
               <div className="w-12 h-12 lg:w-10 lg:h-10 rounded-full bg-emerald-100 flex items-center justify-center mb-6 lg:mb-4">
                 <Users size={24} className="text-emerald-600 lg:w-5 lg:h-5" />
               </div>
-              <h4 className="text-xl lg:text-lg font-black mb-3 lg:mb-2 text-slate-800">Skilled Professionals</h4>
-              <p className="text-sm lg:text-xs text-slate-600 leading-relaxed">Trained and background-verified technicians.</p>
+              <h4 className="text-xl lg:text-lg font-black mb-3 lg:mb-2 text-slate-800">
+                Skilled Professionals
+              </h4>
+              <p className="text-sm lg:text-xs text-slate-600 leading-relaxed">
+                Trained and background-verified technicians.
+              </p>
             </div>
           </Reveal>
 
@@ -241,7 +301,9 @@ const AboutSection = () => (
             <div className="h-full bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-[2rem] p-10 lg:p-8 shadow-[0_20px_50px_rgba(16,185,129,0.3)] hover:shadow-[0_30px_60px_rgba(16,185,129,0.4)] flex flex-col justify-center items-center text-center text-white hover:scale-105 transition-all duration-500">
               <p className="text-5xl lg:text-4xl font-black mb-2">1x</p>
               <div className="h-1 w-12 bg-emerald-300 rounded-full mb-4"></div>
-              <p className="text-xs lg:text-[10px] font-black uppercase tracking-[0.2em] text-emerald-50">Quality Assured</p>
+              <p className="text-xs lg:text-[10px] font-black uppercase tracking-[0.2em] text-emerald-50">
+                Quality Assured
+              </p>
             </div>
           </Reveal>
         </div>
@@ -252,19 +314,25 @@ const AboutSection = () => (
         <Reveal direction="right" delay={0.2}>
           <div className="flex items-center gap-3">
             <div className="w-12 h-1.5 bg-emerald-600 rounded-full"></div>
-            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-600">The 1x Advantage</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-600">
+              The 1x Advantage
+            </p>
           </div>
         </Reveal>
 
         <Reveal direction="right" delay={0.4}>
           <h2 className="text-3xl lg:text-4xl font-black text-slate-800 leading-[1.2] tracking-tight">
-            Your Trusted Partner for <span className="text-emerald-600">Complete Home Care.</span>
+            Your Trusted Partner for{" "}
+            <span className="text-emerald-600">Complete Home Care.</span>
           </h2>
         </Reveal>
 
         <Reveal direction="right" delay={0.6}>
           <p className="text-base text-slate-600 leading-relaxed font-medium">
-            At 1X Urban Services, we bring over a decade of experience in delivering professional home services. From routine cleaning to major renovations, we ensure quality, safety, and customer satisfaction in every job.
+            At 1X Urban Services, we bring over a decade of experience in
+            delivering professional home services. From routine cleaning to
+            major renovations, we ensure quality, safety, and customer
+            satisfaction in every job.
           </p>
         </Reveal>
       </div>
@@ -273,12 +341,12 @@ const AboutSection = () => (
 );
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({ name: '', message: '' });
+  const [formData, setFormData] = useState({ name: "", message: "" });
 
   const handleWhatsAppInquiry = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `*New Inquiry*%0A*Name:* ${formData.name}%0A*Message:* ${formData.message}`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
   };
 
   return (
@@ -291,15 +359,30 @@ const ContactUs = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 relative z-10 items-center">
             <Reveal direction="up" delay={0.2}>
               <div className="space-y-8 text-center lg:text-left">
-                <div className="inline-block px-4 py-1.5 rounded-full border border-emerald-500/30 text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">Contact 24/7</div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight px-4 sm:px-0">Get a <span className="text-emerald-500 underline decoration-emerald-500/30 underline-offset-8">Free Quote</span> Today.</h2>
-                <p className="text-base sm:text-lg text-slate-400 max-w-md mx-auto lg:mx-0 font-medium leading-relaxed px-4 sm:px-0">Our team is ready to serve you. Book your service now and experience professional home care.</p>
+                <div className="inline-block px-4 py-1.5 rounded-full border border-emerald-500/30 text-emerald-400 text-[10px] font-black uppercase tracking-[0.2em]">
+                  Contact 24/7
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight px-4 sm:px-0">
+                  Get a{" "}
+                  <span className="text-emerald-500 underline decoration-emerald-500/30 underline-offset-8">
+                    Free Quote
+                  </span>{" "}
+                  Today.
+                </h2>
+                <p className="text-base sm:text-lg text-slate-400 max-w-md mx-auto lg:mx-0 font-medium leading-relaxed px-4 sm:px-0">
+                  Our team is ready to serve you. Book your service now and
+                  experience professional home care.
+                </p>
 
                 <div className="flex flex-col gap-4 max-w-sm mx-auto lg:mx-0">
                   <div className="group flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-emerald-500/50 hover:bg-white/10 transition-all duration-500">
-                    <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,0.4)] group-hover:rotate-6 transition-transform"><Phone size={20} /></div>
+                    <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,0.4)] group-hover:rotate-6 transition-transform">
+                      <Phone size={20} />
+                    </div>
                     <div className="text-left">
-                      <p className="text-[9px] text-slate-500 uppercase font-black tracking-widest mb-0.5">Direct Line</p>
+                      <p className="text-[9px] text-slate-500 uppercase font-black tracking-widest mb-0.5">
+                        Direct Line
+                      </p>
                       <p className="text-lg font-black">{PHONE_DISPLAY}</p>
                     </div>
                   </div>
@@ -312,23 +395,31 @@ const ContactUs = () => {
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-emerald-500 rounded-xl rotate-12 -z-10 animate-float"></div>
                 <form className="space-y-6" onSubmit={handleWhatsAppInquiry}>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 px-2">Your Full Name</label>
+                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 px-2">
+                      Your Full Name
+                    </label>
                     <input
                       type="text"
                       required
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.5rem] px-8 py-5 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all font-bold placeholder:text-slate-300 text-base"
                       placeholder="Johnathan Doe"
                     />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 px-2">Message</label>
+                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 px-2">
+                      Message
+                    </label>
                     <textarea
                       rows={3}
                       required
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       className="w-full bg-slate-50 border-2 border-slate-100 rounded-[1.25rem] px-6 py-4 focus:border-emerald-500 focus:bg-white focus:outline-none transition-all font-bold placeholder:text-slate-300 resize-none text-base"
                       placeholder="How can we help you today?"
                     ></textarea>
@@ -354,17 +445,39 @@ const KeyFeatures = () => (
     <div className="container mx-auto px-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
         {[
-          { icon: Zap, title: "Super Fast", desc: "Quick Service", color: "text-amber-500", bg: "bg-amber-100" },
-          { icon: ShieldCheck, title: "100% Secure", desc: "Verified Makers", color: "text-emerald-600", bg: "bg-emerald-100" },
-          { icon: Award, title: "Best Price", desc: "Affordable", color: "text-blue-500", bg: "bg-blue-100" }
+          {
+            icon: Zap,
+            title: "Super Fast",
+            desc: "Quick Service",
+            color: "text-amber-500",
+            bg: "bg-amber-100",
+          },
+          {
+            icon: ShieldCheck,
+            title: "100% Secure",
+            desc: "Verified Makers",
+            color: "text-emerald-600",
+            bg: "bg-emerald-100",
+          },
+          {
+            icon: Award,
+            title: "Best Price",
+            desc: "Affordable",
+            color: "text-blue-500",
+            bg: "bg-blue-100",
+          },
         ].map((feat, i) => (
           <Reveal key={i} direction="up" delay={i * 0.1} width="100%">
             <div className="bg-white rounded-2xl p-4 lg:p-5 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100/50 group cursor-default">
-              <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl ${feat.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+              <div
+                className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl ${feat.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}
+              >
                 <feat.icon size={24} className={`${feat.color}`} />
               </div>
               <div>
-                <h4 className="font-black text-slate-800 text-sm lg:text-base uppercase tracking-tight">{feat.title}</h4>
+                <h4 className="font-black text-slate-800 text-sm lg:text-base uppercase tracking-tight">
+                  {feat.title}
+                </h4>
                 <p className="text-xs font-bold text-slate-500">{feat.desc}</p>
               </div>
             </div>
@@ -385,11 +498,17 @@ const ServicesSection = () => {
       slug: "home-cleaning",
       image: "/images/services/home-cleaning.png",
       subs: [
-        "Bathroom Cleaning", "Balcony Cleaning", "Window Cleaning",
-        "Fridge Cleaning", "Kitchen Cleaning", "Floor Cleaning",
-        "Sofa Cleaning", "Carpet Cleaning", "Mattress Cleaning",
-        "Jumbo Water Tank & Softener Cleaning"
-      ]
+        "Bathroom Cleaning",
+        "Balcony Cleaning",
+        "Window Cleaning",
+        "Fridge Cleaning",
+        "Kitchen Cleaning",
+        "Floor Cleaning",
+        "Sofa Cleaning",
+        "Carpet Cleaning",
+        "Mattress Cleaning",
+        "Jumbo Water Tank & Softener Cleaning",
+      ],
     },
     {
       id: 2,
@@ -399,9 +518,11 @@ const ServicesSection = () => {
       slug: "pest-control",
       image: "/images/services/pest-control-main.jpg",
       subs: [
-        "Cockroach & Ant Control", "General Pest Control",
-        "Bed Bug Control", "Termite Control"
-      ]
+        "Cockroach & Ant Control",
+        "General Pest Control",
+        "Bed Bug Control",
+        "Termite Control",
+      ],
     },
     {
       id: 3,
@@ -411,9 +532,10 @@ const ServicesSection = () => {
       slug: "packers-movers",
       image: "/images/services/packers-movers-main-v2.jpg",
       subs: [
-        "Home Shifting", "Office Relocation",
-        "Safe Packing & Transportation"
-      ]
+        "Home Shifting",
+        "Office Relocation",
+        "Safe Packing & Transportation",
+      ],
     },
     {
       id: 4,
@@ -422,9 +544,7 @@ const ServicesSection = () => {
       icon: <Wrench className="text-emerald-500" size={32} />,
       slug: "electrical-plumbing",
       image: "/images/services/sub/electrical-services-v2.jpg",
-      subs: [
-        "Electrical Repairs & Fittings", "Plumbing Repairs & Maintenance"
-      ]
+      subs: ["Electrical Repairs & Fittings", "Plumbing Repairs & Maintenance"],
     },
     {
       id: 5,
@@ -432,8 +552,8 @@ const ServicesSection = () => {
       desc: "Professional home painting services that enhance the appearance and protection of your home.",
       icon: <Paintbrush className="text-emerald-500" size={32} />,
       slug: "home-painting",
-      image: "/images/services/home-painting.png",
-      subs: ["Interior Painting", "Exterior Painting", "Texture Painting"]
+      image: "/images/services/home-painting.jpg",
+      subs: ["Interior Painting", "Exterior Painting", "Texture Painting"],
     },
     {
       id: 6,
@@ -442,21 +562,28 @@ const ServicesSection = () => {
       icon: <Layout className="text-emerald-500" size={32} />,
       slug: "civil-interior",
       image: "/images/services/civil-interior.png",
-      subs: ["Civil Works", "Interior Design & Execution"]
-    }
+      subs: ["Civil Works", "Interior Design & Execution"],
+    },
   ];
 
   return (
-    <section id="services" className="py-24 bg-white selection:bg-emerald-600 selection:text-white">
+    <section
+      id="services"
+      className="py-24 bg-white selection:bg-emerald-600 selection:text-white"
+    >
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.4em] text-emerald-600 mb-4 lg:mb-6">Our Expertise</p>
+          <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.4em] text-emerald-600 mb-4 lg:mb-6">
+            Our Expertise
+          </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 lg:mb-8 tracking-tight leading-tight text-slate-800">
-            Professional Solutions <br /> For Every <span className="text-emerald-600">Home.</span>
+            Professional Solutions <br /> For Every{" "}
+            <span className="text-emerald-600">Home.</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-500 font-bold leading-relaxed px-4 sm:px-0">
-            From deep cleaning to complete renovations, we provide a wide range of professional services to keep your home in perfect condition.
+            From deep cleaning to complete renovations, we provide a wide range
+            of professional services to keep your home in perfect condition.
           </p>
         </div>
 
@@ -512,7 +639,9 @@ const VisionSection = () => (
 
     <div className="container mx-auto px-6 text-center relative z-10">
       {/* OUR VISION Label */}
-      <p className="text-xs font-bold uppercase tracking-[0.3em] text-emerald-200/80 mb-4 lg:mb-6">Our Vision</p>
+      <p className="text-xs font-bold uppercase tracking-[0.3em] text-emerald-200/80 mb-4 lg:mb-6">
+        Our Vision
+      </p>
 
       {/* Main Heading */}
       <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-2 lg:mb-4 tracking-tight leading-tight text-white">
@@ -527,7 +656,9 @@ const VisionSection = () => (
 
       {/* Description */}
       <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed mb-12 lg:mb-16 font-medium px-4">
-        Our mission is simple — to deliver reliable, professional home services that make everyday life easier. From cleaning and repairs to complete home care, we put quality, safety, and customer trust first.
+        Our mission is simple — to deliver reliable, professional home services
+        that make everyday life easier. From cleaning and repairs to complete
+        home care, we put quality, safety, and customer trust first.
       </p>
 
       {/* Glassmorphic Cards */}
@@ -536,31 +667,35 @@ const VisionSection = () => (
           {
             title: "Quality You Can Trust",
             icon: <CheckCircle2 size={32} />,
-            desc: "Every service is delivered by trained professionals using safe methods and proven processes to ensure lasting results."
+            desc: "Every service is delivered by trained professionals using safe methods and proven processes to ensure lasting results.",
           },
           {
             title: "Reliable & On Time",
             icon: <Zap size={32} />,
-            desc: "We respect your time. Our team arrives on schedule and completes every job with care and professionalism."
+            desc: "We respect your time. Our team arrives on schedule and completes every job with care and professionalism.",
           },
           {
             title: "Customer-First Approach",
             icon: <ShieldCheck size={32} />,
-            desc: "Your satisfaction is our priority. We listen, we deliver, and we stand by our work every time."
-          }
+            desc: "Your satisfaction is our priority. We listen, we deliver, and we stand by our work every time.",
+          },
         ].map((item, i) => (
-          <Reveal key={i} direction="up" delay={i * 0.2} className="h-full" width="100%">
-            <div
-              className="h-full flex flex-col justify-center group p-8 lg:p-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] hover:bg-white/15 hover:border-white/30 transition-all duration-500 relative overflow-hidden"
-            >
+          <Reveal
+            key={i}
+            direction="up"
+            delay={i * 0.2}
+            className="h-full"
+            width="100%"
+          >
+            <div className="h-full flex flex-col justify-center group p-8 lg:p-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] hover:bg-white/15 hover:border-white/30 transition-all duration-500 relative overflow-hidden">
               {/* Icon Circle */}
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500">
-                <div className="text-white">
-                  {item.icon}
-                </div>
+                <div className="text-white">{item.icon}</div>
               </div>
               <h4 className="text-xl font-black mb-4">{item.title}</h4>
-              <p className="text-sm text-emerald-50/70 font-bold leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-emerald-50/70 font-bold leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           </Reveal>
         ))}
@@ -570,14 +705,17 @@ const VisionSection = () => (
 );
 
 function HomeContent() {
-  const [activePage, setActivePage] = useState('home');
+  const [activePage, setActivePage] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const page = searchParams.get('page');
+    const page = searchParams.get("page");
     setTimeout(() => {
-      if (page && ['home', 'services', 'about', 'vision', 'contact'].includes(page)) {
+      if (
+        page &&
+        ["home", "services", "about", "vision", "contact"].includes(page)
+      ) {
         setActivePage(page);
       }
       setIsVisible(true);
@@ -588,7 +726,7 @@ function HomeContent() {
     setIsVisible(false);
     setTimeout(() => {
       setActivePage(page);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsVisible(true);
     }, 200); // Snappier transition
   };
@@ -598,8 +736,10 @@ function HomeContent() {
       <Navbar activePage={activePage} onNavigate={navigate} />
 
       {/* Page Content with Transition Wrapper - Optimized for performance */}
-      <div className={`transition-opacity duration-500 ease-out min-h-screen ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        {activePage === 'home' && (
+      <div
+        className={`transition-opacity duration-500 ease-out min-h-screen ${isVisible ? "opacity-100" : "opacity-0"}`}
+      >
+        {activePage === "home" && (
           <main>
             <Hero />
             <KeyFeatures />
@@ -611,14 +751,21 @@ function HomeContent() {
           </main>
         )}
 
-        {activePage === 'about' && (
+        {activePage === "about" && (
           <main className="pt-24 lg:pt-32">
             <AboutSection />
             <div className="bg-slate-50 py-32 mt-20">
               <div className="container mx-auto px-6 text-center">
-                <div className="inline-block p-4 rounded-3xl bg-emerald-100 mb-8"><Award size={48} className="text-emerald-600" /></div>
-                <h2 className="text-5xl lg:text-7xl font-black mb-10 tracking-tight text-slate-800">Ready to build your legacy?</h2>
-                <p className="text-xl text-slate-500 max-w-2xl mx-auto mb-16 font-bold leading-relaxed">Join hundreds of local families who trust 1x for their most critical home care services.</p>
+                <div className="inline-block p-4 rounded-3xl bg-emerald-100 mb-8">
+                  <Award size={48} className="text-emerald-600" />
+                </div>
+                <h2 className="text-5xl lg:text-7xl font-black mb-10 tracking-tight text-slate-800">
+                  Ready to build your legacy?
+                </h2>
+                <p className="text-xl text-slate-500 max-w-2xl mx-auto mb-16 font-bold leading-relaxed">
+                  Join hundreds of local families who trust 1x for their most
+                  critical home care services.
+                </p>
                 <WhatsAppBtn className="inline-flex !px-16 !py-6" />
               </div>
             </div>
@@ -626,21 +773,31 @@ function HomeContent() {
           </main>
         )}
 
-        {activePage === 'vision' && (
+        {activePage === "vision" && (
           <main className="pt-24 lg:pt-32">
             <VisionSection />
             <div className="bg-white py-40">
               <div className="container mx-auto px-6 text-center">
-                <span className="text-xs font-black uppercase tracking-[0.4em] text-emerald-600 mb-6 block">Our Commitment</span>
-                <h2 className="text-5xl lg:text-7xl font-black mb-12 tracking-tight text-slate-700">Service that matters.</h2>
+                <span className="text-xs font-black uppercase tracking-[0.4em] text-emerald-600 mb-6 block">
+                  Our Commitment
+                </span>
+                <h2 className="text-5xl lg:text-7xl font-black mb-12 tracking-tight text-slate-700">
+                  Service that matters.
+                </h2>
                 <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto text-left">
                   <div className="p-10 rounded-[3rem] bg-slate-50 hover:bg-emerald-50 transition-colors">
                     <h4 className="text-2xl font-black mb-4">Integrity</h4>
-                    <p className="text-slate-500 font-bold leading-relaxed">We believe in transparent pricing and clear communication. No hidden complexities or charges.</p>
+                    <p className="text-slate-500 font-bold leading-relaxed">
+                      We believe in transparent pricing and clear communication.
+                      No hidden complexities or charges.
+                    </p>
                   </div>
                   <div className="p-10 rounded-[3rem] bg-slate-50 hover:bg-emerald-50 transition-colors">
                     <h4 className="text-2xl font-black mb-4">Innovation</h4>
-                    <p className="text-slate-500 font-bold leading-relaxed">Staying ahead with modern techniques and safe service standards is our daily goal.</p>
+                    <p className="text-slate-500 font-bold leading-relaxed">
+                      Staying ahead with modern techniques and safe service
+                      standards is our daily goal.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -649,14 +806,14 @@ function HomeContent() {
           </main>
         )}
 
-        {activePage === 'services' && (
+        {activePage === "services" && (
           <main className="pt-24 lg:pt-32">
             <ServicesSection />
             <ExperienceStats />
           </main>
         )}
 
-        {activePage === 'contact' && (
+        {activePage === "contact" && (
           <main className="pt-24 lg:pt-32">
             <ContactUs />
           </main>
@@ -670,7 +827,13 @@ function HomeContent() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><div className="w-16 h-16 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin"></div></div>}>
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="w-16 h-16 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      }
+    >
       <HomeContent />
     </Suspense>
   );
