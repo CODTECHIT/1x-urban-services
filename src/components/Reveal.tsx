@@ -27,8 +27,8 @@ export const Reveal = ({ children, width = "fit-content", direction = "up", dela
     const variants = {
         hidden: {
             opacity: 0,
-            y: direction === "up" ? 75 : direction === "down" ? -75 : 0,
-            x: direction === "left" ? 75 : direction === "right" ? -75 : 0,
+            y: direction === "up" ? 30 : direction === "down" ? -30 : 0,
+            x: direction === "left" ? 30 : direction === "right" ? -30 : 0,
         },
         visible: {
             opacity: 1,
@@ -43,7 +43,7 @@ export const Reveal = ({ children, width = "fit-content", direction = "up", dela
                 variants={variants}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.5, delay, ease: "easeOut" }}
+                transition={{ duration: 0.4, delay, ease: [0.25, 1, 0.5, 1] }}
                 className="h-full" // Ensure motion div takes full height too if needed
             >
                 {children}

@@ -581,7 +581,7 @@ function HomeContent() {
         setActivePage(page);
       }
       setIsVisible(true);
-    }, 100);
+    }, 50);
   }, [searchParams]);
 
   const navigate = (page: string) => {
@@ -590,15 +590,15 @@ function HomeContent() {
       setActivePage(page);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setIsVisible(true);
-    }, 400); // Slightly longer for smoother feel
+    }, 200); // Snappier transition
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-700 selection:bg-emerald-100 selection:text-emerald-900 transition-colors duration-500">
+    <div className="min-h-screen bg-white text-slate-700 selection:bg-emerald-100 selection:text-emerald-900">
       <Navbar activePage={activePage} onNavigate={navigate} />
 
-      {/* Page Content with Transition Wrapper */}
-      <div className={`transition-all duration-700 ease-out min-h-screen ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      {/* Page Content with Transition Wrapper - Optimized for performance */}
+      <div className={`transition-opacity duration-500 ease-out min-h-screen ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {activePage === 'home' && (
           <main>
             <Hero />
