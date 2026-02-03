@@ -6,7 +6,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Privacy Policy | 1x Urban Services',
-    description: 'Read our privacy policy to understand how we handle your data.',
+    description: 'Read our privacy policy to understand how we handle your data and ensure your privacy while using our home services.',
+    keywords: ['privacy policy', 'data protection', '1x urban services privacy', 'home services privacy'],
 };
 
 export default function PrivacyPolicy() {

@@ -9,9 +9,20 @@ import { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Professional Home Services | 1x Urban Services",
+  title: "Professional Home & Office Services Bangalore | 1x Urban Services",
   description:
-    "Explore our wide range of home services including cleaning, pest control, painting, and more.",
+    "Comprehensive range of professional home services in Bangalore. Including deep cleaning, specialized pest control, expert home painting, packers & movers, and civil works. Quality guaranteed with expert technicians.",
+  keywords: [
+    "home services list",
+    "deep cleaning services Bangalore",
+    "professional pest control",
+    "house painting services",
+    "home relocation Bangalore",
+    "electrical repairs",
+    "plumbing maintenance",
+    "civil and interior works Bangalore",
+    "1x urban services catalog"
+  ],
 };
 
 export default function ServicesPage() {

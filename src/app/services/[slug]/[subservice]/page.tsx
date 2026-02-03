@@ -19,13 +19,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!subServiceData || !service) {
     return {
-      title: "Service Not Found",
+      title: "Service Not Found | 1x Urban Services",
     };
   }
 
+  const keywords = [
+    subServiceData.name,
+    `${subServiceData.name} Bangalore`,
+    `${subServiceData.name} service`,
+    `professional ${subServiceData.name.toLowerCase()}`,
+    `best ${subServiceData.name.toLowerCase()} in Bangalore`,
+    service.name,
+    "1x urban services",
+    "home services"
+  ];
+
   return {
-    title: `${subServiceData.name} - ${service.name} | 1x Urban Services`,
-    description: subServiceData.fullDescription.substring(0, 160),
+    title: `${subServiceData.name} - ${service.name} Bangalore | 1x Urban Services`,
+    description: subServiceData.shortDesc || subServiceData.fullDescription.substring(0, 160),
+    keywords: keywords,
+    openGraph: {
+      title: `${subServiceData.name} | 1x Urban Services`,
+      description: subServiceData.shortDesc,
+      type: 'article',
+      url: `https://1xurbanservices.com/services/${slug}/${subservice}`,
+    }
   };
 }
 

@@ -6,7 +6,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Terms & Conditions | 1x Urban Services',
-    description: 'Read our terms and conditions for using 1x Urban Services.',
+    description: 'Read our terms and conditions for using 1x Urban Services. Understand our service agreements, booking policies, and user responsibilities.',
+    keywords: ['terms and conditions', 'service agreement', '1x urban services terms', 'home services booking policy'],
 };
 
 export default function TermsConditions() {
