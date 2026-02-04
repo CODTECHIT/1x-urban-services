@@ -88,6 +88,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={outfit.variable}>
+      <head>
+        <meta name="google-site-verification" content="_Kt04O5F5VNlQ8B8SCIL5TpIFmpHOHQUxwYc8sOrytc" />
+      </head>
       <body className="antialiased" suppressHydrationWarning>
         <script
           type="application/ld+json"
