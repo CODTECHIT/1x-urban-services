@@ -91,6 +91,18 @@ export default function RootLayout({
     <html lang="en" className={outfit.variable}>
       <head>
         <meta name="google-site-verification" content="_Kt04O5F5VNlQ8B8SCIL5TpIFmpHOHQUxwYc8sOrytc" />
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF6VJDRG0G"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PF6VJDRG0G');
+            `,
+          }}
+        />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <script
