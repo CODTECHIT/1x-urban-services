@@ -55,18 +55,18 @@ const Hero = () => (
         {/* Left Content */}
         <div className="space-y-6 lg:space-y-7 max-w-2xl text-center mx-auto lg:mx-0 lg:text-left">
           <Reveal direction="up" delay={0.2} width="100%">
-            {/* SEO-optimized H1: Brand + Primary Service + Location */}
+            {/* SEO-optimized H1: Topic-focused with brand secondary */}
             <h1 className="mb-4 leading-none">
-              <span className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4 mb-2">
-                <span className="text-7xl sm:text-8xl lg:text-9xl font-black italic tracking-tighter text-emerald-500">
+              <span className="block text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-800 mb-3">
+                Professional Home Services & Pest Control in Hyderabad
+              </span>
+              <span className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4">
+                <span className="text-6xl sm:text-7xl lg:text-8xl font-black italic tracking-tighter text-emerald-500">
                   1x
                 </span>
-                <span className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-emerald-600">
+                <span className="text-2xl sm:text-4xl lg:text-4xl font-black tracking-tight text-emerald-600">
                   Urban Services
                 </span>
-              </span>
-              <span className="block text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-600 mt-2">
-                Professional Home Services & Pest Control in Hyderabad
               </span>
             </h1>
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold leading-[1.2] tracking-tight text-slate-700">

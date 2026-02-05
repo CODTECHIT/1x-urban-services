@@ -1,4 +1,4 @@
-// Last updated: 2026-02-04 13:24
+// Last updated: 2026-02-05 17:30 - SEO technical fixes
 import React from "react";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "1x Urban Services",
     images: [
       {
-        url: "/logo.png",
+        url: "https://1xurbanservices.com/logo.png",
         width: 800,
         height: 600,
         alt: "1x Urban Services - Home Services & Pest Control in Hyderabad",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
     description: "Premium home services & pest control by verified professionals. Deep cleaning, painting, repairs & maintenance in Hyderabad.",
-    images: ["/logo.png"],
+    images: ["https://1xurbanservices.com/logo.png"],
   },
   icons: {
     icon: "/logo.png",
@@ -80,7 +80,6 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
@@ -119,14 +118,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://1xurbanservices.com",
               "name": "1x Urban Services",
               "alternateName": "1x Urban Services Hyderabad",
-              "description": "Professional home services & pest control company in Hyderabad. Offering deep cleaning, pest control, painting, electrical, plumbing & home maintenance services.",
-              "image": "https://1xurbanservices.com/logo.png",
+              "description": "Professional home services & pest control company in Hyderabad",
               "url": "https://1xurbanservices.com",
               "telephone": "+91 73538 76156",
-              "email": "contact@1xurbanservices.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Plot No 36/3, Chintal, Qutubullapur, Flat no 105",
@@ -142,73 +138,14 @@ export default function RootLayout({
               },
               "areaServed": {
                 "@type": "City",
-                "name": "Hyderabad",
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": "Telangana"
-                }
+                "name": "Hyderabad"
               },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Home Services & Pest Control",
-                "itemListElement": [
-                  {
-                    "@type": "OfferCatalog",
-                    "name": "Home Services",
-                    "itemListElement": [
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deep Cleaning Services" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Cleaning Services" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Maintenance" } }
-                    ]
-                  },
-                  {
-                    "@type": "OfferCatalog",
-                    "name": "Pest Control Services",
-                    "itemListElement": [
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Termite Control" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cockroach Control" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bed Bug Control" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Pest Control" } }
-                    ]
-                  },
-                  {
-                    "@type": "OfferCatalog",
-                    "name": "Painting Services",
-                    "itemListElement": [
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting" } }
-                    ]
-                  },
-                  {
-                    "@type": "OfferCatalog",
-                    "name": "Repair & Maintenance",
-                    "itemListElement": [
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical Services" } },
-                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Services" } }
-                    ]
-                  }
-                ]
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                  "Sunday"
-                ],
-                "opens": "00:00",
-                "closes": "23:59"
-              },
-              "sameAs": [
-                "https://wa.me/917353876156"
-              ],
-              "priceRange": "₹₹",
-              "paymentAccepted": "Cash, UPI, Bank Transfer",
-              "currenciesAccepted": "INR"
+              "makesOffer": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Services" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pest Control Services" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Painting Services" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Repair & Maintenance Services" } }
+              ]
             })
           }}
         />
