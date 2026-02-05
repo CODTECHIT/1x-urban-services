@@ -69,11 +69,6 @@ export const metadata: Metadata = {
     description: "Premium home services & pest control by verified professionals. Deep cleaning, painting, repairs & maintenance in Hyderabad.",
     images: ["https://1xurbanservices.com/logo.png"],
   },
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
   robots: {
     index: true,
     follow: true,
