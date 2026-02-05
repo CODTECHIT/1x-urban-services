@@ -9,20 +9,31 @@ import { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Professional Home & Office Services Bangalore | 1x Urban Services",
+  title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
   description:
-    "Comprehensive range of professional home services in Bangalore. Including deep cleaning, specialized pest control, expert home painting, packers & movers, and civil works. Quality guaranteed with expert technicians.",
+    "Professional home services & pest control in Hyderabad. Deep cleaning, termite control, cockroach treatment, painting, electrical & plumbing services by verified experts.",
   keywords: [
-    "home services list",
-    "deep cleaning services Bangalore",
-    "professional pest control",
-    "house painting services",
-    "home relocation Bangalore",
-    "electrical repairs",
-    "plumbing maintenance",
-    "civil and interior works Bangalore",
-    "1x urban services catalog"
+    // Primary Keywords
+    "home services hyderabad",
+    "pest control services hyderabad",
+    "professional home services hyderabad",
+    // Secondary Keywords  
+    "deep cleaning services hyderabad",
+    "termite control hyderabad",
+    "cockroach pest control hyderabad",
+    "house painting hyderabad",
+    "electrical plumbing services hyderabad",
+    "packers movers hyderabad",
+    // Brand Intent
+    "1x urban services",
+    "1x services hyderabad"
   ],
+  openGraph: {
+    title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
+    description: "Professional home services & pest control by verified experts. Deep cleaning, painting, repairs & maintenance in Hyderabad.",
+    type: "website",
+    url: "https://1xurbanservices.com/services",
+  },
 };
 
 export default function ServicesPage() {
@@ -40,11 +51,11 @@ export default function ServicesPage() {
               Our Services
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
-              Professional Home Services
+              Home Services & Pest Control in Hyderabad
             </h1>
             <p className="text-lg sm:text-xl text-emerald-100/70 leading-relaxed">
-              From deep cleaning to complete renovations, we provide
-              professional services for all your home and office needs.
+              Complete home care solutions including deep cleaning, pest control,
+              painting, and maintenance services by verified professionals.
             </p>
           </div>
         </div>

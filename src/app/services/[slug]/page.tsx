@@ -22,25 +22,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
+    // Build prioritized keywords: Primary (service + location) first
     const keywords = [
-        service.name,
-        `${service.name} Bangalore`,
-        `best ${service.name.toLowerCase()}`,
-        `professional ${service.name.toLowerCase()}`,
-        ...service.subServices.map(sub => sub.name.toLowerCase()),
+        // Primary - Service + Location
+        `${service.name.toLowerCase()} hyderabad`,
+        `${service.name.toLowerCase()} services hyderabad`,
+        `professional ${service.name.toLowerCase()} hyderabad`,
+        // Secondary - Sub-services
+        ...service.subServices.map(sub => `${sub.name.toLowerCase()} hyderabad`),
+        // Brand Intent
         "1x urban services",
-        "home services Bangalore"
+        "1x urban services hyderabad",
+        "home services hyderabad"
     ];
 
+    // Enhanced description with location
+    const enhancedDescription = `Professional ${service.name.toLowerCase()} in Hyderabad by verified experts. ${service.shortDesc} Trusted by 5000+ customers.`;
+
     return {
-        title: `${service.name} Services in Bangalore | 1x Urban Services`,
-        description: service.shortDesc || service.fullDescription.substring(0, 160),
+        title: `${service.name} in Hyderabad | 1x Urban Services`,
+        description: enhancedDescription.substring(0, 160),
         keywords: keywords,
         openGraph: {
-            title: `${service.name} Services | 1x Urban Services`,
-            description: service.shortDesc || service.fullDescription.substring(0, 160),
-            type: 'article',
+            title: `${service.name} in Hyderabad | 1x Urban Services`,
+            description: enhancedDescription.substring(0, 160),
+            type: 'website',
             url: `https://1xurbanservices.com/services/${slug}`,
+            siteName: '1x Urban Services',
         }
     };
 }

@@ -55,27 +55,33 @@ const Hero = () => (
         {/* Left Content */}
         <div className="space-y-6 lg:space-y-7 max-w-2xl text-center mx-auto lg:mx-0 lg:text-left">
           <Reveal direction="up" delay={0.2} width="100%">
-            <h1 className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4 mb-4 leading-none">
-              <span className="text-7xl sm:text-8xl lg:text-9xl font-black italic tracking-tighter text-emerald-500">
-                1x
+            {/* SEO-optimized H1: Brand + Primary Service + Location */}
+            <h1 className="mb-4 leading-none">
+              <span className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4 mb-2">
+                <span className="text-7xl sm:text-8xl lg:text-9xl font-black italic tracking-tighter text-emerald-500">
+                  1x
+                </span>
+                <span className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-emerald-600">
+                  Urban Services
+                </span>
               </span>
-              <span className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-emerald-600">
-                Urban Services
+              <span className="block text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-600 mt-2">
+                Professional Home Services & Pest Control in Hyderabad
               </span>
             </h1>
-            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold leading-[1.2] tracking-tight text-slate-700">
-              Your <span className="text-emerald-600">one-stop solution</span>{" "}
-              for all home <span className="text-emerald-600">needs</span>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold leading-[1.2] tracking-tight text-slate-700">
+              Your <span className="text-emerald-600">trusted partner</span> for{" "}
+              cleaning, pest control, painting & home maintenance
             </h2>
           </Reveal>
 
           <Reveal direction="up" delay={0.4} width="100%">
             <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Professional and affordable home services with{" "}
+              Premium home services with{" "}
               <span className="font-bold text-slate-700">
                 10+ years of experience
               </span>{" "}
-              in deep cleaning, pest control, painting, and more.
+              in Hyderabad. Deep cleaning, pest control, painting, and complete home solutions by verified professionals.
             </p>
           </Reveal>
 
@@ -322,17 +328,16 @@ const AboutSection = () => (
 
         <Reveal direction="right" delay={0.4}>
           <h2 className="text-3xl lg:text-4xl font-black text-slate-800 leading-[1.2] tracking-tight">
-            Your Trusted Partner for{" "}
-            <span className="text-emerald-600">Complete Home Care.</span>
+            Why Choose{" "}
+            <span className="text-emerald-600">1x Urban Services?</span>
           </h2>
         </Reveal>
 
         <Reveal direction="right" delay={0.6}>
           <p className="text-base text-slate-600 leading-relaxed font-medium">
-            At 1X Urban Services, we bring over a decade of experience in
-            delivering professional home services. From routine cleaning to
-            major renovations, we ensure quality, safety, and customer
-            satisfaction in every job.
+            Hyderabad&apos;s trusted home services partner with over a decade of experience.
+            From deep cleaning and pest control to painting and repairs, we ensure
+            quality, safety, and customer satisfaction in every job.
           </p>
         </Reveal>
       </div>
@@ -578,12 +583,12 @@ const ServicesSection = () => {
             Our Expertise
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 lg:mb-8 tracking-tight leading-tight text-slate-800">
-            Professional Solutions <br /> For Every{" "}
-            <span className="text-emerald-600">Home.</span>
+            Premium Home Services <br /> in{" "}
+            <span className="text-emerald-600">Hyderabad</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-500 font-bold leading-relaxed px-4 sm:px-0">
-            From deep cleaning to complete renovations, we provide a wide range
-            of professional services to keep your home in perfect condition.
+            Complete home care solutions including deep cleaning, pest control,
+            painting, and maintenance services by verified professionals.
           </p>
         </div>
 
@@ -640,25 +645,25 @@ const VisionSection = () => (
     <div className="container mx-auto px-6 text-center relative z-10">
       {/* OUR VISION Label */}
       <p className="text-xs font-bold uppercase tracking-[0.3em] text-emerald-200/80 mb-4 lg:mb-6">
-        Our Vision
+        Trusted Pest Control Services
       </p>
 
-      {/* Main Heading */}
+      {/* Main Heading - SEO H2 */}
       <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-2 lg:mb-4 tracking-tight leading-tight text-white">
-        One Vision.
+        Professional Home Care in Hyderabad
       </h2>
 
-      {/* Subheading with Green Accent */}
+      {/* Subheading with Green Accent - H3 */}
       <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-8 lg:mb-10 tracking-tight leading-tight">
-        <span className="text-white">Better Homes. </span>
-        <span className="text-emerald-400">Better Living.</span>
+        <span className="text-white">Quality Service. </span>
+        <span className="text-emerald-400">Every Time.</span>
       </h3>
 
-      {/* Description */}
+      {/* Description with local SEO */}
       <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed mb-12 lg:mb-16 font-medium px-4">
-        Our mission is simple — to deliver reliable, professional home services
-        that make everyday life easier. From cleaning and repairs to complete
-        home care, we put quality, safety, and customer trust first.
+        Serving homes across Hyderabad with reliable pest control, deep cleaning,
+        painting, and complete home maintenance solutions. We put quality, safety,
+        and customer trust first in everything we do.
       </p>
 
       {/* Glassmorphic Cards */}

@@ -13,23 +13,31 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "1x Urban Services | #1 Premium Home Services in Bangalore",
-  description: "Transform your home with 1x Urban Services. Professional deep cleaning, reliable pest control, expert painting, and complete home solutions with 10+ years of experience in Bangalore. Book your free quote today!",
+  title: "1x Urban Services | Home Services & Pest Control in Hyderabad",
+  description: "1x Urban Services offers professional home services & pest control in Hyderabad. Trusted experts for deep cleaning, painting, repairs & maintenance. 10+ years experience. Book your free quote today!",
   keywords: [
-    "home services Bangalore",
-    "professional cleaning services",
-    "pest control Bangalore",
-    "home painting services Bangalore",
-    "packers and movers Bangalore",
-    "electrical and plumbing services",
-    "deep cleaning Bangalore",
-    "sofa cleaning service",
-    "1x services",
-    "urban services",
-    "quality home maintenance",
-    "verified home professionals",
-    "residential cleaning Bangalore",
-    "commercial pest control"
+    // Primary Keywords - Home Services & Pest Control Focus
+    "home services hyderabad",
+    "pest control services hyderabad",
+    "professional home services hyderabad",
+    "home maintenance services hyderabad",
+    // Secondary Keywords - Specific Services
+    "deep cleaning services hyderabad",
+    "house cleaning services hyderabad",
+    "termite control hyderabad",
+    "cockroach pest control hyderabad",
+    "painting services hyderabad",
+    "electrical plumbing services hyderabad",
+    "packers movers hyderabad",
+    // Brand Intent Keywords
+    "1x urban services",
+    "1x urban services hyderabad",
+    "premium home services hyderabad",
+    // Entity & Category Keywords
+    "home care services",
+    "residential pest control",
+    "professional home cleaning",
+    "verified home service experts"
   ],
   authors: [{ name: "1x Urban Services" }],
   creator: "1x Urban Services",
@@ -40,8 +48,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "1x Urban Services | Premium Home Services & Solutions",
-    description: "Your trusted partner for home hygiene and maintenance. Book professional cleaning, painting, and pest control services in Bangalore.",
+    title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
+    description: "Premium home services & pest control in Hyderabad by verified professionals. Cleaning, pest control, painting & repairs. Trusted by 5000+ customers.",
     url: "https://1xurbanservices.com",
     siteName: "1x Urban Services",
     images: [
@@ -49,7 +57,7 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 800,
         height: 600,
-        alt: "1x Urban Services Logo",
+        alt: "1x Urban Services - Home Services & Pest Control in Hyderabad",
       },
     ],
     locale: "en_IN",
@@ -57,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "1x Urban Services | Bangalore's Best Home Solutions",
-    description: "Professional home services trusted by 5000+ happy customers. Quality guaranteed.",
+    title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
+    description: "Premium home services & pest control by verified professionals. Deep cleaning, painting, repairs & maintenance in Hyderabad.",
     images: ["/logo.png"],
   },
   icons: {
@@ -111,14 +119,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "1x Urban Services",
-              "image": "https://1xurbanservices.com/logo.png",
               "@id": "https://1xurbanservices.com",
+              "name": "1x Urban Services",
+              "alternateName": "1x Urban Services Hyderabad",
+              "description": "Professional home services & pest control company in Hyderabad. Offering deep cleaning, pest control, painting, electrical, plumbing & home maintenance services.",
+              "image": "https://1xurbanservices.com/logo.png",
               "url": "https://1xurbanservices.com",
               "telephone": "+91 73538 76156",
+              "email": "contact@1xurbanservices.com",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Plot No 36/3, Chintal, Qutubullapur",
+                "streetAddress": "Plot No 36/3, Chintal, Qutubullapur, Flat no 105",
                 "addressLocality": "Hyderabad",
                 "addressRegion": "Telangana",
                 "postalCode": "500054",
@@ -128,6 +139,55 @@ export default function RootLayout({
                 "@type": "GeoCoordinates",
                 "latitude": 17.5028,
                 "longitude": 78.4419
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Hyderabad",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Telangana"
+                }
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Home Services & Pest Control",
+                "itemListElement": [
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Home Services",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deep Cleaning Services" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Cleaning Services" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Maintenance" } }
+                    ]
+                  },
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Pest Control Services",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Termite Control" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cockroach Control" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bed Bug Control" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Pest Control" } }
+                    ]
+                  },
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Painting Services",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Painting" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Painting" } }
+                    ]
+                  },
+                  {
+                    "@type": "OfferCatalog",
+                    "name": "Repair & Maintenance",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical Services" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plumbing Services" } }
+                    ]
+                  }
+                ]
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -146,7 +206,9 @@ export default function RootLayout({
               "sameAs": [
                 "https://wa.me/917353876156"
               ],
-              "priceRange": "INR"
+              "priceRange": "₹₹",
+              "paymentAccepted": "Cash, UPI, Bank Transfer",
+              "currenciesAccepted": "INR"
             })
           }}
         />
