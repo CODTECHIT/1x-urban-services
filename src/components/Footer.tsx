@@ -126,6 +126,17 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                 {/* Bottom Bar */}
                 <div className="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-400 font-bold text-[10px] tracking-[0.2em] uppercase">
                     <p>© {new Date().getFullYear()} 1x urban services. ALL RIGHTS RESERVED.</p>
+                    <p>
+                        Developed by{' '}
+                        <a
+                            href="https://www.codtechitsolutions.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-emerald-600 hover:text-emerald-700 transition-colors"
+                        >
+                            CODTECH IT Solutions
+                        </a>
+                    </p>
                     <div className="flex gap-12">
                         <Link href="/privacy" className="hover:text-slate-700 transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-slate-700 transition-colors">Terms & Conditions</Link>
