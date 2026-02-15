@@ -58,7 +58,7 @@ const Hero = () => (
             {/* SEO-optimized H1: Topic-focused with brand secondary */}
             <h1 className="mb-4 leading-none">
               <span className="block text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-800 mb-3">
-                Professional Home Services & Pest Control in Hyderabad
+                Best Home Cleaning & Professional Services in Hyderabad
               </span>
               <span className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4">
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-black italic tracking-tighter text-emerald-500">
@@ -106,12 +106,21 @@ const Hero = () => (
                 <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
                   <Image
                     src="/hero-image.jpg"
-                    alt="Service Professional"
+                    alt="Founder N G Miskin"
                     fill
                     className="object-cover lg:object-top"
                     priority
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
+                </div>
+                {/* Founder Label */}
+                <div className="absolute -bottom-4 right-8 lg:right-4 bg-white px-5 py-3 rounded-2xl shadow-xl z-20 border border-emerald-100 animate-float stagger-2">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-600 mb-0.5">
+                    Founder
+                  </p>
+                  <p className="text-sm lg:text-base font-black text-slate-800">
+                    N G Miskin
+                  </p>
                 </div>
               </div>
 
@@ -334,11 +343,22 @@ const AboutSection = () => (
         </Reveal>
 
         <Reveal direction="right" delay={0.6}>
-          <p className="text-base text-slate-600 leading-relaxed font-medium">
-            Hyderabad&apos;s trusted home services partner with over a decade of experience.
-            From deep cleaning and pest control to painting and repairs, we ensure
-            quality, safety, and customer satisfaction in every job.
-          </p>
+          <div className="space-y-6">
+            <p className="text-base text-slate-600 leading-relaxed font-medium">
+              Hyderabad&apos;s trusted home services partner with over a decade
+              of experience. From deep cleaning and pest control to painting and
+              repairs, we ensure quality, safety, and customer satisfaction in
+              every job.
+            </p>
+            <div className="pt-4 border-t border-slate-100 inline-block">
+              <p className="text-xl font-black text-slate-800 mb-1">
+                N G Miskin
+              </p>
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-emerald-600">
+                Founder & Managing Director
+              </p>
+            </div>
+          </div>
         </Reveal>
       </div>
     </div>
@@ -709,6 +729,76 @@ const VisionSection = () => (
   </section>
 );
 
+const LocationSEO = () => (
+  <section className="py-16 bg-slate-50 border-t border-slate-100">
+    <div className="container mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
+            Home Cleaning Services Hyderabad
+          </h4>
+          <ul className="space-y-3 text-xs font-bold text-slate-500">
+            <li>Full house deep cleaning services Hyderabad</li>
+            <li>Home cleaning services Hyderabad price</li>
+            <li>Cheap home cleaning services Hyderabad</li>
+            <li>Best flat cleaning Hyderabad</li>
+            <li>Eco-friendly home cleaning near me</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
+            Why Choose Us Over Apps?
+          </h4>
+          <ul className="space-y-3 text-xs font-bold text-slate-500">
+            <li>Professional home cleaning hyderabad vs urban company</li>
+            <li>Best alternative to home service apps</li>
+            <li>Reliable private cleaning services near me</li>
+            <li>Verified local cleaners Hyderabad</li>
+            <li>Same day home services Hyderabad</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
+            Pest Control Authorities
+          </h4>
+          <ul className="space-y-3 text-xs font-bold text-slate-500">
+            <li>Anti termite treatment Hyderabad cost</li>
+            <li>Herbal pest control Hyderabad</li>
+            <li>Cockroach treatment for kitchen Hyderabad</li>
+            <li>Odorless pest control services Hyderabad</li>
+            <li>Bed bug elimination experts near me</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
+            Areas We Serve (Local Hubs)
+          </h4>
+          <p className="text-[10px] font-bold text-slate-400 mb-4 leading-relaxed">
+            Leading home cleaning & maintenance company serving:
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Banjara Hills", "Jubilee Hills", "Gachibowli", "Kondapur", "Madhapur",
+              "Hitech City", "Manikonda", "Kukatpally", "Miyapur", "Nallagandla",
+              "Tellapur", "Bowenpally", "Secunderabad", "Begumpet", "Ameerpet",
+              "Dilshuknagar", "Kothapet", "Nagole", "Uppal", "LB Nagar"
+            ].map((area) => (
+              <span key={area} className="px-2 py-1 bg-white border border-slate-200 rounded text-[9px] text-slate-400 font-bold hover:border-emerald-300 transition-colors">
+                {area}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="mt-12 pt-8 border-t border-slate-200 text-center">
+        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-600">
+          Trusted by 5000+ happy customers in Hyderabad
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
 function HomeContent() {
   const [activePage, setActivePage] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
@@ -753,6 +843,7 @@ function HomeContent() {
             <AboutSection />
             <VisionSection />
             <ContactUs />
+            <LocationSEO />
           </main>
         )}
 
