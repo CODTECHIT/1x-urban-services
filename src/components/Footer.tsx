@@ -29,8 +29,8 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                     {/* Brand Section */}
                     <div className="lg:col-span-4 space-y-8">
                         <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleLinkClick('home')}>
-                            <div className="relative w-48 h-12 md:w-56 md:h-16 transition-transform hover:scale-105">
-                                <Image src="/logo-v2.png" alt="1x Urban Services" fill className="object-contain object-left" />
+                            <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform hover:scale-105">
+                                <Image src="/logo-circular.png" alt="1x Urban Services" fill className="object-contain object-left" />
                             </div>
                         </div>
                         <p className="text-slate-500 leading-relaxed font-bold text-sm md:text-base max-w-sm">
@@ -38,16 +38,21 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                         </p>
 
                         <div className="space-y-5 pt-4">
-                            <div className="flex gap-4 group">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Plot+No+36%2F3%2C+Chintal%2C+Qutubullapur%2C+Ramreddy+Nagar%2C+Hyderabad%2C+Flat+no+105%2C+Medchal+Malkajgiri%2C+Telangana+-+500054"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex gap-4 group hover:opacity-80 transition-opacity"
+                            >
                                 <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-emerald-50 transition-colors">
                                     <MapPin className="text-emerald-600" size={18} />
                                 </div>
-                                <p className="text-slate-500 font-bold text-sm leading-relaxed pt-1">
+                                <p className="text-slate-500 font-bold text-sm leading-relaxed pt-1 cursor-pointer">
                                     Plot No 36/3, Chintal, Qutubullapur, <br />
                                     Ramreddy Nagar, Hyderabad, Flat no 105 <br />
                                     Medchal Malkajgiri, Telangana - 500054
                                 </p>
-                            </div>
+                            </a>
                             <div className="flex items-center gap-4 group">
                                 <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-emerald-50 transition-colors">
                                     <Phone className="text-emerald-600" size={18} />

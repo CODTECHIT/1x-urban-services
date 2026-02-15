@@ -26,14 +26,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const keywords = [
         // Primary - Service + Location
         `${service.name.toLowerCase()} hyderabad`,
+        `${service.name.toLowerCase()} near me`,
         `${service.name.toLowerCase()} services hyderabad`,
-        `professional ${service.name.toLowerCase()} hyderabad`,
+        `${service.name.toLowerCase()} services near me`,
+        `best ${service.name.toLowerCase()} in hyderabad`,
+        `professional ${service.name.toLowerCase()} near me`,
         // Secondary - Sub-services
         ...service.subServices.map(sub => `${sub.name.toLowerCase()} hyderabad`),
+        ...service.subServices.map(sub => `${sub.name.toLowerCase()} near me`),
         // Brand Intent
         "1x urban services",
         "1x urban services hyderabad",
-        "home services hyderabad"
+        "home services hyderabad",
+        "home services near me"
     ];
 
     // Enhanced description with location
