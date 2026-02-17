@@ -29,7 +29,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                     {/* Brand Section */}
                     <div className="lg:col-span-4 space-y-8">
                         <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleLinkClick('home')}>
-                            <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform hover:scale-105">
+                            <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform hover:scale-105">
                                 <Image src="/logo-circular.png" alt="1x Urban Services" fill className="object-contain object-left" />
                             </div>
                         </div>

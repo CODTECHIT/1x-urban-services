@@ -45,7 +45,7 @@ export const Navbar = ({ activePage, onNavigate }: NavbarProps) => {
             <nav className={`fixed top-0 w-full z-[100] transition-all duration-700 ${scrolled || pathname !== '/' ? 'bg-white/80 backdrop-blur-2xl py-3 md:py-5 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)]' : 'bg-transparent py-4 md:py-10'}`}>
                 <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                     <div className="flex items-center gap-3 md:gap-4 cursor-pointer group" onClick={() => handleLinkClick('home')}>
-                        <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform hover:scale-105">
+                        <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform hover:scale-105">
                             <Image src="/logo-circular.png" alt="1x Urban Services" fill className="object-contain object-left" priority />
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export const Navbar = ({ activePage, onNavigate }: NavbarProps) => {
                 {/* Mobile Menu Header */}
                 <div className="flex justify-between items-center p-4 md:p-6 border-b border-white/10">
                     <div className="flex items-center gap-3">
-                        <div className="relative w-12 h-12 flex items-center justify-center">
+                        <div className="relative w-10 h-10 flex items-center justify-center">
                             <Image src="/logo-circular.png" alt="1x Urban Services" fill className="object-contain" />
                         </div>
                     </div>
