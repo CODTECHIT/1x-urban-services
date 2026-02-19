@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     "painting services hyderabad",
     "electrical plumbing services hyderabad",
     "packers movers hyderabad",
+    "best packers and movers hyderabad",
+    "home shifting services hyderabad",
+    "office relocation services hyderabad",
+    "local movers and packers hyderabad",
     // Brand Intent Keywords
     "1x urban services",
     "1xurbanservices",

@@ -732,7 +732,7 @@ const VisionSection = () => (
 const LocationSEO = () => (
   <section className="py-16 bg-slate-50 border-t border-slate-100">
     <div className="container mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
         <div>
           <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
             Our Service Expertise
@@ -767,6 +767,18 @@ const LocationSEO = () => (
             <li>Cockroach treatment for kitchen Hyderabad</li>
             <li>Odorless pest control services Hyderabad</li>
             <li>Bed bug elimination experts near me</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
+            Packers & Movers
+          </h4>
+          <ul className="space-y-3 text-xs font-bold text-slate-500">
+            <li>Best packers and movers Hyderabad</li>
+            <li>Home shifting services Hyderabad price</li>
+            <li>Cheap packers and movers Hyderabad</li>
+            <li>Best office relocation Hyderabad</li>
+            <li>Professional movers and packers near me</li>
           </ul>
         </div>
         <div>
