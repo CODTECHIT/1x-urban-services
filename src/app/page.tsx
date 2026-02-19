@@ -58,7 +58,7 @@ const Hero = () => (
             {/* SEO-optimized H1: Topic-focused with brand secondary */}
             <h1 className="mb-4 leading-none">
               <span className="block text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-800 mb-3">
-                Best Home Cleaning & Professional Services in Hyderabad
+                From Deep Cleaning to Interior Design: Wide Range of Professional Services You Can Trust
               </span>
               <span className="flex flex-wrap items-baseline justify-center lg:justify-start gap-4">
                 <span className="text-6xl sm:text-7xl lg:text-8xl font-black italic tracking-tighter text-emerald-500">
@@ -735,7 +735,7 @@ const LocationSEO = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
-            Home Cleaning Services Hyderabad
+            Our Service Expertise
           </h4>
           <ul className="space-y-3 text-xs font-bold text-slate-500">
             <li>Full house deep cleaning services Hyderabad</li>
@@ -747,11 +747,11 @@ const LocationSEO = () => (
         </div>
         <div>
           <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
-            Why Choose Us Over Apps?
+            Our Service Commitment
           </h4>
           <ul className="space-y-3 text-xs font-bold text-slate-500">
-            <li>Professional home cleaning hyderabad vs urban company</li>
-            <li>Best alternative to home service apps</li>
+            <li>Professional deep cleaning services Hyderabad</li>
+            <li>Premium quality home care solutions</li>
             <li>Reliable private cleaning services near me</li>
             <li>Verified local cleaners Hyderabad</li>
             <li>Same day home services Hyderabad</li>
@@ -759,7 +759,7 @@ const LocationSEO = () => (
         </div>
         <div>
           <h4 className="text-sm font-black uppercase tracking-widest text-slate-800 mb-6 border-b-2 border-emerald-500 w-fit pb-1">
-            Pest Control Authorities
+            Premium Pest Control Hyderabad
           </h4>
           <ul className="space-y-3 text-xs font-bold text-slate-500">
             <li>Anti termite treatment Hyderabad cost</li>

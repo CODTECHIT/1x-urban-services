@@ -13,13 +13,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Best Home Cleaning Services Hyderabad | NO 1 Professionals | 1x Urban Services",
-  description: "Looking for the best home cleaning services in Hyderabad? 1x Urban Services offers 5-star rated deep cleaning, pest control, and home maintenance. Over 5000+ happy homes served. More affordable & reliable than standard urban apps. Book today!",
+  title: "Wide Range of Professional Services You Can Trust | 1x Urban Services",
+  description: "Experience a wide range of professional services you can trust. 1x Urban Services offers expert home cleaning, pest control, painting, moving, and maintenance solutions in Hyderabad. Trusted by 5000+ happy homes. Book your service today!",
   keywords: [
-    "best home cleaning services hyderabad",
+    "professional home services hyderabad",
     "top rated cleaning services hyderabad",
     "professional deep cleaning hyderabad",
-    "home cleaning services hyderabad",
+    "wide range of home services hyderabad",
     "house cleaning services hyderabad near me",
     "affordable cleaning services hyderabad",
     "bathroom cleaning services hyderabad",
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
-    description: "Premium home services & pest control in Hyderabad by verified professionals. Cleaning, pest control, painting & repairs. Trusted by 5000+ customers.",
+    title: "Wide Range of Professional Services You Can Trust | 1x Urban Services",
+    description: "Wide range of professional home services in Hyderabad. From deep cleaning and pest control to painting and repairs, we provide expert care for your home with 10+ years of experience.",
     url: "https://1xurbanservices.com",
     siteName: "1x Urban Services",
     images: [
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
         url: "https://1xurbanservices.com/logo-circular.png",
         width: 800,
         height: 600,
-        alt: "1x Urban Services - Home Services & Pest Control in Hyderabad",
+        alt: "1x Urban Services - Wide Range of Professional Services You Can Trust",
       },
     ],
     locale: "en_IN",
@@ -82,8 +82,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
-    description: "Premium home services & pest control by verified professionals. Deep cleaning, painting, repairs & maintenance in Hyderabad.",
+    title: "Wide Range of Professional Services You Can Trust | 1x Urban Services",
+    description: "Experience a wide range of professional home services you can trust. Expert cleaning, painting, pest control, and maintenance in Hyderabad by verified pros.",
     images: ["https://1xurbanservices.com/logo-circular.png"],
   },
   robots: {
@@ -131,8 +131,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "1x Urban Services",
-              "alternateName": "Best Home Cleaning Hyderabad",
-              "description": "Premium home cleaning, deep cleaning, and pest control services in Hyderabad. Verified professionals, affordable rates, and 5-star service.",
+              "alternateName": "1x Urban Services - Wide Range of Professional Home Solutions",
+              "description": "Offering a wide range of professional services you can trust. 1x Urban Services provides expert home cleaning, pest control, painting, and maintenance in Hyderabad with verified professionals.",
               "url": "https://1xurbanservices.com",
               "logo": "https://1xurbanservices.com/logo-circular.png",
               "image": "https://1xurbanservices.com/hero-image.jpg",
@@ -171,16 +171,16 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Full House Deep Cleaning Services Hyderabad",
-                      "description": "Total professional deep cleaning for homes and apartments."
+                      "name": "Professional Full House Deep Cleaning Solutions",
+                      "description": "Premium deep cleaning for residential and commercial spaces."
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Best Pest Control Services Hyderabad",
-                      "description": "Safe and effective termite, cockroach, and bed bug control."
+                      "name": "Expert Pest Control & Sanitization Services",
+                      "description": "Safe, effective, and professional pest management solutions."
                     }
                   }
                 ]

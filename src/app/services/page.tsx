@@ -9,9 +9,9 @@ import { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
+  title: "Wide Range of Professional Services You Can Trust | 1x Urban Services",
   description:
-    "Professional home services & pest control in Hyderabad. Deep cleaning, termite control, cockroach treatment, painting, electrical & plumbing services by verified experts.",
+    "Experience a wide range of professional services you can trust. Deep cleaning, pest control, painting, moving, and complete home maintenance by verified experts in Hyderabad.",
   keywords: [
     // Primary Keywords
     "home services hyderabad",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     "1x services hyderabad"
   ],
   openGraph: {
-    title: "Home Services & Pest Control in Hyderabad | 1x Urban Services",
-    description: "Professional home services & pest control by verified experts. Deep cleaning, painting, repairs & maintenance in Hyderabad.",
+    title: "Wide Range of Professional Services You Can Trust | 1x Urban Services",
+    description: "Experience a wide range of professional home services you can trust. Expert cleaning, painting, pest control, and maintenance in Hyderabad by verified pros.",
     type: "website",
     url: "https://1xurbanservices.com/services",
   },
@@ -51,7 +51,7 @@ export default function ServicesPage() {
               Our Services
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight">
-              Home Services & Pest Control in Hyderabad
+              Wide Range of Professional Services You Can Trust
             </h1>
             <p className="text-lg sm:text-xl text-emerald-100/70 leading-relaxed">
               Complete home care solutions including deep cleaning, pest control,
